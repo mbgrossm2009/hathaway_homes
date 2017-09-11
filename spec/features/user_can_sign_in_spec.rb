@@ -69,7 +69,7 @@ feature "user can sign up giving when filling form out correctly" do
 
   end
 
-    scenario "A user can log out succesfully" do
+    scenario "A user rcan log out succesfully" do
     visit listings_path
     click_link "Sign Up"
     fill_in "First Name", with: "Matt"
@@ -79,9 +79,8 @@ feature "user can sign up giving when filling form out correctly" do
     fill_in "user_password", with: "password"
     fill_in "password confirmation", with: "password"
     click_button "Sign up"
-    save_and_open_page
 
-    click_link("logout")
+    click_link("Logout")
 
     expect(page).to_not have_content("Logout")
   end
