@@ -1,3 +1,6 @@
 <% @listings.each do |listing| %>
 <%= listing.house_style %>
+
+<%= image_tag listing.listing_photo_url(:thumb)%> 
+
 <% end %>
