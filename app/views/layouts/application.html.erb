@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HathawayHomes</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class= "links">
+      <ul class= "index_links">
+        <li> <%= link_to "HomePage", listings_path %> </li>
+        <% if !user_signed_in? %>
+        <li><%= link_to 'Sign In', new_user_session_path %></li>
+        <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+        <% end %>
+          <% if user_signed_in? %>
+            <li> <%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+          <% end %>
+      </ul>
+    </div>
+
+    <% if flash.any? %>
+      <div class="flash">
+        <div class="container">
+          <%= flash[:alert] %>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>
