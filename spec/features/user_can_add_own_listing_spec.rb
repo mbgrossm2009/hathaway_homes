@@ -15,6 +15,9 @@ feature "An authorized user can add his or her own listing" do
     fill_in "Zipcode", with: "01581"
     fill_in "Number of Acres", with: 345
     fill_in 'Asking Price', with: "$120,000"
+    attach_file "Listing Photogit", "#{Rails.root}/spec/support/images/photo.png"
+
+
     click_button "Create"
 
     expect(page).to have_content("Ranch")
