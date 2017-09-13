@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+<li><%= image_tag @listing.listing_photo_url(:thumb)%></li>
