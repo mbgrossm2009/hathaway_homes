@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+
+ .listing_info {
+   list-style-type: none;
+ }

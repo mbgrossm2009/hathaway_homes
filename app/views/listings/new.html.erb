@@ -1,9 +1,10 @@
 
 <div class= "new_listing_form">
   <%= form_for @listing do |f| %>
-    <%= f.label :house_style,'House Style' %><%= f.text_field :house_style %>
+    <%= f.label :house_style,'House Style'%><%= f.select :house_style, ['CapeCod', 'Country French', 'Colonial', 'Victorian', 'Tudor', 'Craftsman', 'Cottage', 'Mediterranean', 'Ranch', 'Contemporary', 'Other']%>
     <%= f.label :street_address,'Street Address' %>  <%= f.text_field :street_address %>
     <%= f.label :state, "State" %>  <%= f.text_field :state %>
+    <%= f.label :town, "Town" %> <%= f.text_field :town %> 
     <%= f.label :zipcode, "Zipcode" %>  <%= f.text_field :zipcode %>
     <%= f.label :number_of_bathrooms, "Number of Bathrooms" %>  <%= f.text_field :number_of_bathrooms %>
     <%= f.label :number_of_bedrooms, "Number of Bedrooms" %>  <%= f.text_field :number_of_bedrooms %>

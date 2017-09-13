@@ -1,6 +1,14 @@
-<% @listings.each do |listing| %>
-<%= listing.house_style %>
-
-<%= image_tag listing.listing_photo_url(:thumb)%> 
-
-<% end %>
+  <ul class= "listing_info">
+    <% @listings.each do |listing| %>
+    <li>House Style: <%= listing.house_style  %></li>
+    <li>Street Address: <%= listing.street_address%></li>
+    <li>Town: <%= listing.town%> </li>
+    <li>State: <%= listing.state%></li>
+    <li>Zipcode: <%= listing.zipcode%></li>
+    <li>Number of Acres: <%= listing.number_of_acres%></li>
+    <li>Number of Bathrooms: <%= listing.number_of_bathrooms%></li>
+    <li>Number of Bedrooms: <%= listing.number_of_bedrooms%></li>
+    <li>Asking Price: $<%= listing.asking_price%></li>
+    <%= link_to 'Show', listing %>
+  </ul>
+  <% end %>

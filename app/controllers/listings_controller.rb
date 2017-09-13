@@ -1,4 +1,5 @@
 class ListingsController < ApplicationController
+  before_action :authenticate_user!
 
   def index
 
@@ -23,9 +24,14 @@ class ListingsController < ApplicationController
   end
 end
 
+  def show
+    @listing = Listing.find(params[:id])
+
+  end
+
 private
 
 def listing_params
-    params.require(:listing).permit(:house_style, :street_address, :state, :zipcode, :number_of_bathrooms, :number_of_bedrooms, :number_of_acres, :asking_price, :listing_photo)
+    params.require(:listing).permit(:house_style, :street_address, :state, :zipcode, :number_of_bathrooms, :number_of_bedrooms, :number_of_acres, :asking_price, :listing_photo, :town)
   end
 end

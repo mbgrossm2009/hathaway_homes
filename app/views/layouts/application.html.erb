@@ -13,7 +13,9 @@
   <body>
     <div class= "links">
       <ul class= "index_links">
+        <li> <%= link_to "Admin Page", users_path %> </li>
         <li> <%= link_to "HomePage", listings_path %> </li>
+        <li> <%= link_to "Add a Listing", new_listing_path %> </li>
         <% if !user_signed_in? %>
         <li><%= link_to 'Sign In', new_user_session_path %></li>
         <li><%= link_to 'Sign Up', new_user_registration_path %></li>
@@ -23,6 +25,8 @@
           <% end %>
       </ul>
     </div>
+
+
 
     <% if flash.any? %>
       <div class="flash">

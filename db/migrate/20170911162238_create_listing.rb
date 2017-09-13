@@ -9,6 +9,7 @@ class CreateListing < ActiveRecord::Migration[5.1]
       t.string :number_of_bedrooms
       t.integer :number_of_acres
       t.integer :asking_price
+      t.string :town
 
       t.timestamp
     end
