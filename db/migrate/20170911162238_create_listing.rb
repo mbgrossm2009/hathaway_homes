@@ -10,6 +10,7 @@ class CreateListing < ActiveRecord::Migration[5.1]
       t.integer :number_of_acres
       t.integer :asking_price
       t.string :town
+      t.integer :user_id
 
       t.timestamp
     end

@@ -15,12 +15,6 @@ class UsersController < ApplicationController
     redirect_to users_path
   end
 
-  def destroy
-    @user = User.find(params[:id])
-    @cell_phone.destroy
-    flash[:success] = "User has been deleted"
-    redirect_to users_path
-  end
 
   def authorize_user
     if !user_signed_in? || !current_user.admin?
