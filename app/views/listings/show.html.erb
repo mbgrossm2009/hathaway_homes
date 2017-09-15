@@ -21,7 +21,7 @@
   </iframe>
   <div class= "edit_delete_links">
     <% if current_user == @listing.user %>
-    <%= button_to "Edit the Cell Phone name here", edit_listing_path(@listing) %>
+    <%= button_to "Edit Listing info here", edit_listing_path(@listing) %>
     <%= button_to "delete", listing_path(@listing), method: :delete %>
     <% end %>
   </div>
