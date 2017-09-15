@@ -13,8 +13,6 @@ class ListingsController < ApplicationController
   def create
 
     @listing = Listing.new(listing_params)
-    binding.pry
-
     if @listing.save
       flash[:alert] = "New Listing Added Successfully"
       redirect_to listings_path
