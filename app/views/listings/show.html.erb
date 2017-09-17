@@ -8,8 +8,6 @@
     <li>Number of Bathrooms: <%= @listing.number_of_bathrooms%></li>
     <li>Number of Bedrooms: <%= @listing.number_of_bedrooms%></li>
     <li>Asking Price: $<%= @listing.asking_price%></li>
-
-
   </ul>
 
   <iframe
@@ -19,9 +17,10 @@
     src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCETOh7Po4OZrJn86i3bkINY1pOuDcOijM
       &q=<%=@listing.street_address %>,<%=@listing.town%>,<%=@listing.state%>" allowfullscreen>
   </iframe>
+
   <div class= "edit_delete_links">
     <% if current_user == @listing.user %>
-    <%= button_to "Edit Listing info here", edit_listing_path(@listing) %>
-    <%= button_to "delete", listing_path(@listing), method: :delete %>
+    <%= link_to "Edit Listing info here", edit_listing_path(@listing) %>
+    <%= link_to "Delete Listing", listing_path(@listing), method: :delete %>
     <% end %>
   </div>
