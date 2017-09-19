@@ -1,5 +1,5 @@
 require 'rails_helper'
-require 'pry'
+ 
 
 feature "An authorized user can add his or her own listing" do
 

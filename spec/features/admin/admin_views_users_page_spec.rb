@@ -1,5 +1,5 @@
 require 'rails_helper'
-require 'pry'
+ 
 feature 'admin can view the users page' do
   let(:user) {FactoryGirl.create(:user)}
 

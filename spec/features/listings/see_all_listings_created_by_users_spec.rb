@@ -1,5 +1,5 @@
 require 'rails_helper'
-require 'pry'
+
 
 feature "View index page to see all phones" do
   let(:user) {FactoryGirl.create(:user)}

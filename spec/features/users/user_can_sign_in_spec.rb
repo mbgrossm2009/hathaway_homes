@@ -1,5 +1,5 @@
 require 'rails_helper'
-require 'pry'
+ 
 
 
 feature "user can sign up when filling form out correctly" do
