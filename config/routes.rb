@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 # resources :listings
 
 resources :listings
+resources :about_me, only: [:index]
 
 resources :users, only: [:index]
 put 'admin/:id' => 'users#make_admin', :as => "make_admin"

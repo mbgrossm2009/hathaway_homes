@@ -23,3 +23,9 @@
 
   list-style-type: none;
 }
+
+.about_me {
+  position: absolute;
+  right: 110px;
+  top: 30px;
+}
