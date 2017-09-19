@@ -2,7 +2,7 @@ require 'rails_helper'
 require 'pry'
 
 
-feature "user can sign up giving when filling form out correctly" do
+feature "user can sign up when filling form out correctly" do
 
   scenario 'a user can sign up successfully' do
     visit listings_path
@@ -69,7 +69,7 @@ feature "user can sign up giving when filling form out correctly" do
 
   end
 
-    scenario "A user rcan log out succesfully" do
+    scenario "A user can log out succesfully" do
     visit listings_path
     click_link "Sign Up"
     fill_in "First Name", with: "Matt"
