@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 20170914034104) do
     t.integer "asking_price"
     t.string "town"
     t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "listing_photo"
   end
 

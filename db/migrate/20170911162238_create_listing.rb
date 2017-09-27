@@ -12,7 +12,7 @@ class CreateListing < ActiveRecord::Migration[5.1]
       t.string :town
       t.integer :user_id
 
-      t.timestamp
+      t.timestamps
     end
   end
 end
