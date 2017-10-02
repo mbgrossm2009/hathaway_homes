@@ -11,7 +11,7 @@
     <li><%= f.label :number_of_bedrooms, "Number of Bedrooms: " %>  <%= f.text_field :number_of_bedrooms %></li>
     <li><%= f.label :number_of_acres, "Number of Acres: " %>  <%= f.text_field :number_of_acres %></li>
     <li><%= f.label :asking_price, "Asking Price: " %>  <%= f.text_field :asking_price %></li>
-    <li><%= f.label :description, "description: " %> <%= f.text_field :description%></li>
+    <li><%= f.label :description, "Description: " %> <%= f.text_field :description%></li>
     <li><%= f.label :listing_photo, "Listing Photo: " %><%= f.file_field :listing_photo %></li>
     <li><%= f.hidden_field :user_id, value: current_user.id %></li>
   </ul>
