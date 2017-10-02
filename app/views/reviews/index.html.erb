@@ -1,5 +1,6 @@
-<% @reviews.each do |review| %>
+
 <ul>
-<li><%= review.description %><li>
-  <ul>
-<% end %>
+  <% @reviews.each do |review| %>
+  <li><%= review.description %></li>
+  <% end %>
+</ul>
