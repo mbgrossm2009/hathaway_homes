@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20171002004716) do
     t.string "town"
     t.integer "user_id"
     t.integer "review_id"
-    t.text "description"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "listing_photo"

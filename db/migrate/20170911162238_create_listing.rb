@@ -12,7 +12,7 @@ class CreateListing < ActiveRecord::Migration[5.1]
       t.string :town
       t.integer :user_id
       t.integer :review_id
-      t.text :description
+      t.string :description
 
       t.timestamps
     end
