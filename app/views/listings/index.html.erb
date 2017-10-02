@@ -5,7 +5,8 @@
     <li>Town: <%= listing.town%> </li>
     <li>State: <%= listing.state%></li>
     <li>Zipcode: <%= listing.zipcode%></li>
-    <li><%= image_tag listing.listing_photo_url(:thumb)%></li>
+    <li> Description: <%= listing.description %> </li>
+    <li><%= image_tag listing.listing_photo_url :thumb unless listing.listing_photo_url.blank?%></li>
     <%= link_to 'More Information', listing %>
   <% end %>
   </ul>
