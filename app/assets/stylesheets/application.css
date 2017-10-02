@@ -14,18 +14,35 @@
  *= require_self
  */
 
+/*body {
 
- .listing_info {
-   list-style-type: none;
- }
-
-.index_links {
-
-  list-style-type: none;
+  background-color: blue;
+}*/
+ .main_links {
+  position: relative;
+  bottom: 70px;
 }
+
+
+.links {
+  display: inline;
+
+}
+
 
 .about_me {
   position: absolute;
   right: 110px;
   top: 30px;
+}
+
+.main_title {
+      text-align: center;
+      position: absolute;
+      top: 60px;
+      left: 400px;
+}
+
+ul {
+  list-style-type: none;
 }

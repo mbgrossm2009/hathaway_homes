@@ -1,11 +1,13 @@
-ADMIN PAGE
+
+
+<h2> Admin Page </h2>
 <ul class = "admin">
   <% @users.each do |user| %>
     <li> Name: <%= user.first_name%> <%=user.last_name%> | Admin: <%= user.admin? %></li>
     <li>Email: <%= user.email %></li>
     <li> Phone Number: <%= user.phone_number%> </li>
       <% if user != current_user %> <%= button_to "Change Admin Status", {action: "make_admin", id: user.id }, method: :put %>
-        <!-- <%= link_to "Delete this User", users_path, method: :delete, data: { confirm: "You sure?" } %> -->
+        <%= link_to "Delete this User", users_path, method: :delete, data: { confirm: "You sure?" } %>
         <% end %>
   <%end%>
 </ul>

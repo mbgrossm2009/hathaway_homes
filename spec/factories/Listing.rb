@@ -9,5 +9,6 @@ FactoryGirl.define do
     number_of_bedrooms "3"
     asking_price "$12000"
     user_id = 1
+    # listing_photo ("/Users/MattGrossman/desktop/hathaway-homes/hathaway_homes/spec/support/images/photo.png", "image/jpeg") }
   end
 end

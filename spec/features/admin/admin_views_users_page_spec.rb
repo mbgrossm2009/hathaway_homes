@@ -1,5 +1,5 @@
 require 'rails_helper'
- 
+
 feature 'admin can view the users page' do
   let(:user) {FactoryGirl.create(:user)}
 
@@ -9,9 +9,9 @@ feature 'admin can view the users page' do
     visit users_path
     click_link "Admin Page"
 
-    expect(page).to have_content("ADMIN PAGE")
+    expect(page).to have_content("Admin Page")
   end
-  # 
+  #
   # scenario "non admin views admin page" do
   #   sign_in user
   #   user.update_attributes(admin: false)
