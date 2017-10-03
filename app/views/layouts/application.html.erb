@@ -22,6 +22,7 @@
         <li><%= link_to 'Sign In', new_user_session_path %></li>
         <li><%= link_to 'Sign Up', new_user_registration_path %></li>
         <% else %>
+          <li> <%= link_to "Advanced Search", new_search_path %> </li>
           <li> <%= link_to "Reviews Page", reviews_path %> </li>
           <li> <%= link_to 'Write a Personal Review about Dave', new_review_path%> </li>
           <li> <%= link_to "Add a Listing", new_listing_path %> </li>
