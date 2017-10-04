@@ -28,7 +28,11 @@
   display: inline;
 
 }
-
+.search_link {
+position: absolute;
+left: 56pc;
+top: 3pc;
+}
 
 .about_me {
   position: absolute;
@@ -42,7 +46,10 @@
       top: 60px;
       left: 400px;
 }
-
+.about_me_link {
+  position: absolute;
+left: 56pc;
+}
 ul {
   list-style-type: none;
 }

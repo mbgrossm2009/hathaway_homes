@@ -28,7 +28,7 @@ gem 'devise'
 gem "simple_form"
 gem "launchy"
 gem 'pg'
-gem 'carrierwave'
+gem "carrierwave", :github => "carrierwaveuploader/carrierwave"
 gem "mini_magick"
 gem 'rails_12factor', group: :production
 gem "rubillow"

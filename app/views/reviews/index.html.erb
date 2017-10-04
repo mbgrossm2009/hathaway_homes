@@ -1,4 +1,6 @@
 
+<%= link_to 'Write a Personal Review about Dave', new_review_path%>
+
 <ul>
   <% @reviews.each do |review| %>
   <li><%= review.description %></li>

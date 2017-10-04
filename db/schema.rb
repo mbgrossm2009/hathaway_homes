@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20171003182000) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "listing_photo"
+    t.string "listing_photo", default: [], array: true
   end
 
   create_table "reviews", force: :cascade do |t|

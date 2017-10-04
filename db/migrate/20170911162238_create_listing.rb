@@ -14,6 +14,7 @@ class CreateListing < ActiveRecord::Migration[5.1]
       t.integer :review_id
       t.string :description
 
+
       t.timestamps
     end
   end
