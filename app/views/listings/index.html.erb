@@ -7,7 +7,7 @@
     <li>Zipcode: <%= listing.zipcode%></li>
     <li> Description: <%= listing.description%> </li>
     <li><% listing.listing_photo.each do |photo| %>
-    <%= image_tag(photo.url) %>
+    <%= image_tag(photo.url :thumb) %>
     <% end %>
 
 

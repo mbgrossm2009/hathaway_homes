@@ -31,7 +31,6 @@ gem 'pg'
 gem "carrierwave", :github => "carrierwaveuploader/carrierwave"
 gem "mini_magick"
 gem 'rails_12factor', group: :production
-gem "rubillow"
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

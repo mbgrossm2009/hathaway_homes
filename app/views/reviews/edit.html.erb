@@ -1,8 +1,10 @@
+<h1> Edit Page </h1>
+
 
 <div class= "new_reviewform">
   <%= form_for @review do |f| %>
     <%= f.label :description,'Description' %>  <%= f.text_field :description %>
     <%= f.hidden_field :user_id, value: current_user.id %><
-    <%= f.submit "Create" %>
+    <%= f.submit "Submit Changes" %>
   <% end %>
 </div>

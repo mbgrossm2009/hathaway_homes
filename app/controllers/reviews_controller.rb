@@ -20,9 +20,31 @@ class ReviewsController < ApplicationController
     end
   end
 
+    def destroy
+      @review = Review.find(params[:id])
+      @review.destroy
+      flash[:alert] = "Review has been deleted"
+      redirect_to reviews_path
+    end
+
+    def edit
+      @review = Review.find(params[:id])
+    end
+
+    def update
+    @review = Review.find(params[:id])
+    if @review.update_attributes(review_params) && current_user == @review.user
+      flash[:alert] = "Review Successfully Updated"
+      redirect_to reviews_path
+    else
+      render 'edit'
+    end
+  end
+
+
   private
 
   def review_params
-    params.require(:review).permit(:description)
+    params.require(:review).permit(:description, :user_id)
   end
 end

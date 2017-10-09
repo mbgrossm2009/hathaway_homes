@@ -9,7 +9,11 @@ resources :reviews
 resources :searches
 
 resources :users, only: [:index]
+
+
 put 'admin/:id' => 'users#make_admin', :as => "make_admin"
+
+
 
 root to: 'listings#index'
 end
