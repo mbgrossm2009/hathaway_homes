@@ -28,6 +28,11 @@
   display: inline;
 
 }
+.simple_search {
+position: absolute;
+left: 56pc;
+top: 4pc;
+}
 .search_link {
 position: absolute;
 left: 56pc;
@@ -50,6 +55,8 @@ top: 3pc;
   position: absolute;
 left: 56pc;
 }
+
+
 ul {
   list-style-type: none;
 }

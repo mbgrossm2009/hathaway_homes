@@ -8,6 +8,7 @@ class User < ApplicationRecord
 
   has_many :listings
   has_many :reviews
+  has_many :votes
 
   devise :database_authenticatable, :registerable,
    :recoverable, :rememberable, :trackable, :validatable

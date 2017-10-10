@@ -1,3 +1,5 @@
+
+
   <ul class= "listing_info">
     <% @listings.each do |listing| %>
     <li>House Style: <%= listing.house_style %></li>
@@ -7,8 +9,9 @@
     <li>Zipcode: <%= listing.zipcode%></li>
     <li> Description: <%= listing.description%> </li>
     <li><% listing.listing_photo.each do |photo| %>
-    <%= image_tag(photo.url :thumb) %>
+    <li><%= image_tag(photo.url :thumb) %> </li>
     <% end %>
+
 
 
     <%= link_to 'More Information', listing %>

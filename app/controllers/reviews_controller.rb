@@ -32,14 +32,22 @@ class ReviewsController < ApplicationController
     end
 
     def update
-    @review = Review.find(params[:id])
-    if @review.update_attributes(review_params) && current_user == @review.user
-      flash[:alert] = "Review Successfully Updated"
-      redirect_to reviews_path
-    else
-      render 'edit'
+      @review = Review.find(params[:id])
+        if @review.update_attributes(review_params) && current_user == @review.user
+        flash[:alert] = "Review Successfully Updated"
+        redirect_to reviews_path
+      else
+        render 'edit'
+      end
     end
-  end
+
+    def upvote
+      @review = Review.find(params[:id])
+      binding.pry
+      Vote.create(review: @review, user: current_user)
+      redirect_to(reviews_path)
+    end
+
 
 
   private

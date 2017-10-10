@@ -11,7 +11,13 @@
 
 
   <body>
-<h1 class= "main_title"> Hathaway Homes-MA </h1>
+    <div class = "simple_search">
+      Quick Search: <%= form_tag(listings_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Search Listings" %>
+        <%= submit_tag "Search", :name => nil %>
+      <% end %>
+    </div>
+    <h1 class= "main_title"> Hathaway Homes-MA </h1>
     <div class= "links">
       <ul>
         <div class = "about_me_link">
@@ -22,16 +28,16 @@
         <div class = "homepage_link">
           <li> <%= link_to "HomePage", listings_path %> </li>
         </div>
-          <% if !user_signed_in? %>
-            <li><%= link_to 'Sign In', new_user_session_path %></li>
-            <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-          <% else %>
-        <div class = "search_link">
-          <li> <%= link_to "Advanced Search", new_search_path %> </li>
-        </div>
-        <div class = "reviews_link">
-          <li> <%= link_to "Reviews", reviews_path %> </li>
-        </div>
+        <% if !user_signed_in? %>
+          <li><%= link_to 'Sign In', new_user_session_path %></li>
+          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+        <% else %>
+          <div class = "search_link">
+            <li> <%= link_to "Advanced Search", new_search_path %> </li>
+          </div>
+          <div class = "reviews_link">
+            <li> <%= link_to "Reviews", reviews_path %> </li>
+          </div>
             <li> <%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
         <% end %>
       </ul>

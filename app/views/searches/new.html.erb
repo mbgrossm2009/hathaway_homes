@@ -1,6 +1,7 @@
 <h1> Advanced Search </h1>
 
 <%= form_for @search do |f| %>
+<ul>
   <li> <%= f.label :house_style,'House Style: '%><%= f.select :house_style, ['CapeCod', 'Country French', 'Colonial', 'Victorian', 'Tudor', 'Craftsman', 'Cottage', 'Mediterranean', 'Ranch', 'Contemporary', 'Other']%></li>
   <li> <%= f.label :street_address,'Street Address: ' %>  <%= f.text_field :street_address %></li>
   <li><%= f.label :state, "State: " %>  <%= f.text_field :state %></li>
@@ -11,4 +12,5 @@
   <li><%= f.label :number_of_acres, "Number of Acres: " %>  <%= f.text_field :number_of_acres %></li>
   <li><%= f.label :asking_price, "Asking Price: " %>  <%= f.text_field :asking_price %></li>
   <li> <%=f.submit "Search" %> </li>
+  <ul>
   <% end %>

@@ -2,7 +2,12 @@ class ListingsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-  @listings = Listing.all
+    @listings = Listing.all
+    if params[:search]
+      @listings = Listing.search(params[:search]).order("created_at DESC")
+    else
+      @listings = Listing.all.order('created_at DESC')
+    end
   end
 
   def new
@@ -37,13 +42,13 @@ class ListingsController < ApplicationController
 
   def update
   @listing = Listing.find(params[:id])
-  if @listing.update_attributes(listing_params) && current_user == @listing.user
-    flash[:alert] = "Listing Successfully Updated"
-    redirect_to listings_path
-  else
-    render 'edit'
+    if @listing.update_attributes(listing_params) && current_user == @listing.user
+      flash[:alert] = "Listing Successfully Updated"
+      redirect_to listings_path
+    else
+      render 'edit'
+    end
   end
-end
 private
 
   def listing_params

@@ -5,7 +5,12 @@ Rails.application.routes.draw do
 
 resources :listings
 resources :about_me, only: [:index]
-resources :reviews
+resources :reviews do
+  member do
+    post 'upvote'
+    post 'downvote'
+  end
+end
 resources :searches
 
 resources :users, only: [:index]

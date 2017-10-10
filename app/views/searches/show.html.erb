@@ -1,6 +1,10 @@
 <h1> Search Results </h1>
 
-<%@search.listings.each do |listing| %>
+
+<%if @search.listings.empty? %>
+  <h2> No Results </h2>
+<% else %>
+  <%@search.listings.each do |listing| %>
 <ul class= "listing_info">
   <li>House Style: <%= listing.house_style  %></li>
   <li>Street Address: <%= listing.street_address%></li>
@@ -9,6 +13,6 @@
   <li>Zipcode: <%= listing.zipcode%></li>
 </ul>
 
-
 <%= link_to 'More Information', listing %>
+  <% end %>
 <% end %>
