@@ -14,24 +14,26 @@
  *= require_self
  */
 
-/*body {
+ .background_image {
+   background-image: url(homepage_pic.png);
+   min-height: 400px;
+   background-size: cover;
+ position: relative;}
 
-  background-color: blue;
-}*/
+
  .main_links {
   position: relative;
   bottom: 70px;
 }
 
-
-.links {
-  display: inline;
-
-}
 .simple_search {
-position: absolute;
-left: 56pc;
-top: 4pc;
+  position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      margin: auto;
+      text-align: center;
 }
 .search_link {
 position: absolute;
@@ -55,8 +57,27 @@ top: 3pc;
   position: absolute;
 left: 56pc;
 }
+#logo{
+  width: 100%;
+max-width:100px;
 
+margin: auto;
+}
+#header{
+  margin-top: 15px;
+  max-width: 1200px;
+  margin: auto;
+}
+.links>li{
+  float: left;
+  padding: 7px;
+}
+
+#header>div>div:nth-child(1),#header>div>div:nth-child(3){
+    margin-top: 25px;
+}
 
 ul {
   list-style-type: none;
+
 }

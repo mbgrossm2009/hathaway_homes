@@ -6,46 +6,52 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
 
 
 
   <body>
 
-    <div class = "simple_search">
-      Quick Search of Listings: <%= form_tag(listings_path, :method => "get", id: "search-form") do %>
-        <%= text_field_tag :search, params[:search], placeholder: "Search Listings" %>
-        <%= submit_tag "Search", :name => nil %>
-      <% end %>
-    </div>
-    <h1 class= "main_title"> Hathaway Homes-MA </h1>
-    <div class= "links">
-      <ul>
-        <div class = "about_me_link">
-          <li><%= link_to "About Dave", about_me_index_path%></li>
+
+
+    <div id="header" class="container-fluid">
+      <div class="row">
+        <div class="col-lg-5">
+          <ul class="links">
+              <li><%= link_to "About Dave", about_me_index_path%></li>
+              <li> <%= link_to "Admin Page", users_path %> </li>
+              <li> <%= link_to "Add a Listing", new_listing_path %> </li>
+              <li> <%= link_to "HomePage", listings_path %> </li>
+          </ul>
         </div>
-          <li> <%= link_to "Admin Page", users_path %> </li>
-          <li> <%= link_to "Add a Listing", new_listing_path %> </li>
-        <div class = "homepage_link">
-          <li> <%= link_to "HomePage", listings_path %> </li>
-        </div>
+      <div class="col-lg-2">
+        <img id="logo" src="http://www.euneighbours.eu/sites/default/files/2017-01/placeholder.png">
+      </div>
+      <div class="col-lg-5">
+        <ul  class=" links ">
         <% if !user_signed_in? %>
           <li><%= link_to 'Sign In', new_user_session_path %></li>
           <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-        <% else %>
-        <%= current_user.first_name%> <%=current_user.last_name %> Admin: <%=current_user.admin?%>
-
-          <div class = "search_link">
-            <li> <%= link_to "Advanced Search", new_search_path %> </li>
-          </div>
-          <div class = "reviews_link">
-            <li> <%= link_to "Reviews", reviews_path %> </li>
-          </div>
-            <li> <%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
         <% end %>
-      </ul>
-  </div>
+            <li> <%= link_to "Advanced Search", new_search_path %> </li>
 
+            <li> <%= link_to "Reviews", reviews_path %> </li>
+            <li> <%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+      </ul>
+    </div>
+    </div>
+    </div>
+
+
+    <div class = "background_image">
+      <div class = "simple_search">
+          Quick Search of Listings: <%= form_tag(listings_path, :method => "get", id: "search-form") do %>
+            <%= text_field_tag :search, params[:search], placeholder: "Search Listings" %>
+            <%= submit_tag "Search", :name => nil %>
+          <% end %>
+        </div>
+    </div>
 
 
     <% if flash.any? %>
