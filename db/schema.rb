@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20171011000203) do
     t.string "zipcode"
     t.integer "number_of_bathrooms"
     t.integer "number_of_bedrooms"
-    t.integer "number_of_acres"
+    t.integer "square_footage"
     t.integer "asking_price"
     t.string "town"
     t.integer "user_id"
@@ -52,10 +52,12 @@ ActiveRecord::Schema.define(version: 20171011000203) do
     t.string "state"
     t.integer "number_of_bathrooms"
     t.integer "number_of_bedrooms"
-    t.integer "number_of_acres"
+    t.integer "square_footage"
     t.integer "asking_price"
     t.string "town"
     t.string "zipcode"
+    t.decimal "min_price"
+    t.decimal "max_price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

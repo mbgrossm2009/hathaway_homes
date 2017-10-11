@@ -17,6 +17,6 @@ class SearchesController < ApplicationController
 private
 
   def search_params
-    params.require(:search).permit(:house_style, :street_address, :state, :zipcode, :number_of_bathrooms, :number_of_bedrooms, :number_of_acres, :asking_price, :town)
+    params.require(:search).permit(:house_style, :street_address, :state, :zipcode, :number_of_bathrooms, :number_of_bedrooms, :square_footage, :asking_price, :town, :min_price, :max_price)
   end
 end

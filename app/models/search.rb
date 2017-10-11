@@ -10,12 +10,13 @@ class Search < ApplicationRecord
     listings = Listing.where("house_style ILIKE ?", "%#{house_style}%") if house_style.present?
     listings = Listing.where("street_address ILIKE ?", "%#{street_address}%") if street_address.present?
     listings = Listing.where("town ILIKE ?", "%#{town}%") if town.present?
-    listings = Listing.where("State ILIKE ?", "%#{state}%") if state.present?
+    listings = Listing.where("state ILIKE ?", "%#{state}%") if state.present?
     listings = Listing.where("zipcode ILIKE ?", "%#{zipcode}%") if zipcode.present?
-    listings = Listing.where("number_of_acres ILIKE ?", "%#{number_of_acres}%") if number_of_acres.present?
-    listings = Listing.where("number_of_bedrooms ILIKE ?", "%#{number_of_bedrooms}%") if number_of_bedrooms.present?
-    listings = Listing.where("number_of_bathrooms ILIKE ?", "%#{number_of_bathrooms}%") if number_of_bathrooms.present?
-    listings = Listing.where("asking_price ILIKE ?", "#{asking_price}%") if asking_price.present?
+    listings = Listing.where("square_footage ILIKE ?", "%#{square_footage}%") if square_footage.present?
+    listings = Listing.where(number_of_bedrooms: number_of_bedrooms) if number_of_bedrooms.present?
+    listings = Listing.where(number_of_bathrooms: number_of_bathrooms) if number_of_bathrooms.present?
+    listings = Listing.where("asking_price >= ?", min_price) if min_price.present?
+    listings = Listing.where("asking_price <= ?", max_price) if max_price.present?
     listings
   end
 end

@@ -4,7 +4,7 @@ FactoryGirl.define do
     state "MA"
     town "Westborough"
     zipcode "01581"
-    number_of_acres "3"
+    square_footage "3"
     number_of_bathrooms "3"
     number_of_bedrooms "3"
     asking_price "$12000"
