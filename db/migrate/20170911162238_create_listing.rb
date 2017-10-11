@@ -5,10 +5,10 @@ class CreateListing < ActiveRecord::Migration[5.1]
       t.string :street_address
       t.string :state
       t.string :zipcode
-      t.integer :number_of_bathrooms
-      t.integer :number_of_bedrooms
-      t.integer :square_footage
-      t.integer :asking_price
+      t.string :number_of_bathrooms
+      t.string :number_of_bedrooms
+      t.string :square_footage
+      t.string :asking_price
       t.string :town
       t.integer :user_id
       t.string :description
