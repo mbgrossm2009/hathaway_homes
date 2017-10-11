@@ -2,7 +2,7 @@
 <div class= "new_reviewform">
   <%= form_for @review do |f| %>
     <%= f.label :description,'Description' %>  <%= f.text_field :description %>
-    <%= f.hidden_field :user_id, value: current_user.id %><
+    <%= f.hidden_field :user_id, value: current_user.id %>
     <%= f.submit "Create" %>
   <% end %>
 </div>
