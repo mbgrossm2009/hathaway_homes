@@ -1,5 +1,24 @@
 
+<div class = "background_image">
+  <div class = "simple_search">
+      Quick Search of Listings: <%= form_tag(listings_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Search Listings" %>
+        <%= submit_tag "Search", :name => nil %>
+      <% end %>
+    </div>
+</div>
 
+<div class = "about_me">
+About Dave:
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+</div>
+<div>
+<%=image_tag("dave1.png", alt: "Example Image")%>
+</div>
+
+<div>
   <ul class= "listing_info">
     <% @listings.each do |listing| %>
     <li>House Style: <%= listing.house_style %></li>
@@ -11,9 +30,7 @@
     <li><% listing.listing_photo.each do |photo| %>
     <li><%= image_tag(photo.url :thumb) %> </li>
     <% end %>
-
-
-
     <%= link_to 'More Information', listing %>
   <% end %>
   </ul>
+</div>

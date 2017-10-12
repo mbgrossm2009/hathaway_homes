@@ -44,13 +44,7 @@
     </div>
 
 
-    <div class = "background_image">
-      <div class = "simple_search">
-          Quick Search of Listings: <%= form_tag(listings_path, :method => "get", id: "search-form") do %>
-            <%= text_field_tag :search, params[:search], placeholder: "Search Listings" %>
-            <%= submit_tag "Search", :name => nil %>
-          <% end %>
-        </div>
+  
     </div>
 
 

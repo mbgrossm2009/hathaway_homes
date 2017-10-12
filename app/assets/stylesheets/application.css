@@ -18,7 +18,8 @@
    background-image: url(homepage_pic.png);
    min-height: 400px;
    background-size: cover;
- position: relative;}
+   position: relative;
+ }
 
 
  .main_links {
@@ -42,9 +43,18 @@ top: 3pc;
 }
 
 .about_me {
-  position: absolute;
-  right: 110px;
-  top: 30px;
+  float: left;
+  width: 550px;
+  margin-top: 88px;
+}
+img {
+  width: 536px;
+  height: auto;
+  float: left;
+  left: 198px;
+  position: relative;
+  bottom: -32px;
+  padding: 59px;
 }
 
 .main_title {
