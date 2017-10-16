@@ -9,7 +9,7 @@
     <li>Number of Bedrooms: <%= @listing.number_of_bedrooms%></li>
     <li>Asking Price: $<%= @listing.asking_price%></li>
     <li><% @listing.listing_photo.each do |photo| %>
-    <%= image_tag(photo.url :thumb) %>
+    <%= image_tag(photo.url, id: 'main_listing_photo') %>
     <% end %>
   </ul>
 

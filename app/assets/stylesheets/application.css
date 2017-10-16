@@ -27,6 +27,11 @@
   bottom: 70px;
 }
 
+.listing {
+position: absolute;
+top: 1500px;
+}
+
 .simple_search {
   position: absolute;
       left: 0;
@@ -47,14 +52,19 @@ top: 3pc;
   width: 550px;
   margin-top: 88px;
 }
-img {
-  width: 536px;
+#dave_1 {
+  width: 675px;
   height: auto;
   float: left;
-  left: 198px;
+  left: 576px;
   position: relative;
-  bottom: -32px;
+  bottom: 369px;
   padding: 59px;
+}
+
+#main_listing_photo{
+  width: 200px;
+
 }
 
 .main_title {

@@ -13,13 +13,12 @@ About Dave:
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-</div>
 <div>
-<%=image_tag("dave1.png", alt: "Example Image")%>
+<%=image_tag("dave1.png", alt: "Example Image", id: 'dave_1')%>
 </div>
-
-<div>
-  <ul class= "listing_info">
+</div>
+<div class = "my_listings">
+  <ul class= "listing">
     <% @listings.each do |listing| %>
     <li>House Style: <%= listing.house_style %></li>
     <li>Street Address: <%= listing.street_address%></li>
@@ -27,10 +26,12 @@ About Dave:
     <li>State: <%= listing.state%></li>
     <li>Zipcode: <%= listing.zipcode%></li>
     <li> Description: <%= listing.description%> </li>
-    <li><% listing.listing_photo.each do |photo| %>
-    <li><%= image_tag(photo.url :thumb) %> </li>
+    <% listing.listing_photo.each_with_index do |photo, index| %>
+      <% if index == 0 %>
+        <li><%= image_tag(photo.url, id: "main_listing_photo") %></li>
+      <% end %>
     <% end %>
     <%= link_to 'More Information', listing %>
-  <% end %>
+   <% end %>
   </ul>
 </div>
