@@ -17,7 +17,8 @@ About Dave:
 <%=image_tag("dave1.png", alt: "Example Image", id: 'dave_1')%>
 </div>
 </div>
-<div class = "my_listings">
+<h1 class = "my_listings"> My Listings </h1>
+<div class = "my_listings_list">
   <ul class= "listing">
     <% @listings.each do |listing| %>
     <li>House Style: <%= listing.house_style %></li>

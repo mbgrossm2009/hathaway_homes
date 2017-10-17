@@ -10,6 +10,11 @@
   <li>Town: <%= listing.town%> </li>
   <li>State: <%= listing.state%></li>
   <li>Zipcode: <%= listing.zipcode%></li>
+  <% listing.listing_photo.each_with_index do |photo, index| %>
+    <% if index == 0 %>
+      <li><%= image_tag(photo.url, id: "main_listing_photo") %></li>
+    <% end %>
+    <% end %>
 </ul>
 
 <%= link_to 'More Information', listing %>
