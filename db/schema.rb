@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20171011000203) do
     t.string "asking_price"
     t.string "town"
     t.integer "user_id"
-    t.string "description"
+    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "listing_photo", default: [], array: true

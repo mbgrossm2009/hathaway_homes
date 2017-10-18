@@ -11,7 +11,7 @@ class CreateListing < ActiveRecord::Migration[5.1]
       t.string :asking_price
       t.string :town
       t.integer :user_id
-      t.string :description
+      t.text :description
 
 
       t.timestamps

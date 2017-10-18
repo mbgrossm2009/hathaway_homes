@@ -20,14 +20,13 @@
         <div class="col-lg-5">
           <ul class="links">
               <li><%= link_to "About Dave", about_me_index_path%></li>
-              <li> <%= link_to "Admin Page", users_path %> </li>
-              <li> <%= link_to "Add a Listing", new_listing_path %> </li>
               <li> <%= link_to "HomePage", listings_path %> </li>
+              <li> <%= link_to "Additional Resources", additional_links_path %> </li>
           </ul>
         </div>
-      <div class="col-lg-2">
-        <img id="logo" src="http://www.euneighbours.eu/sites/default/files/2017-01/placeholder.png">
-      </div>
+        <div class="col-lg-2">
+          <img id="logo" src="http://www.euneighbours.eu/sites/default/files/2017-01/placeholder.png">
+        </div>
       <div class="col-lg-5">
         <ul  class=" links ">
         <% if !user_signed_in? %>
@@ -35,7 +34,6 @@
           <li><%= link_to 'Sign Up', new_user_registration_path %></li>
         <% end %>
             <li> <%= link_to "Advanced Search", new_search_path %> </li>
-
             <li> <%= link_to "Reviews", reviews_path %> </li>
             <li> <%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
       </ul>
@@ -44,8 +42,9 @@
     </div>
 
 
-  
-    </div>
+<div class = "admin_link">
+   <%= link_to "Admin Page", users_path %> </li>
+ </div>
 
 
     <% if flash.any? %>
@@ -54,5 +53,6 @@
           <%= flash[:alert] %>
     <% end %>
     <%= yield %>
+
   </body>
 </html>

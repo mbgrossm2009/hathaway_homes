@@ -12,6 +12,7 @@ resources :reviews do
   end
 end
 resources :searches
+resources :additional_links, only: [:index]
 
 resources :users, only: [:index]
 

@@ -13,8 +13,11 @@
  *= require_tree .
  *= require_self
  */
+html, body {
+  background-color: #4D5259 !important;
+  color: white !important;
 
-
+ }
 
  .background_image {
    background-image: url(homepage_pic.png);
@@ -25,12 +28,14 @@
 
 .my_listings{
 position: relative;
-top: 662px;
+top: 730px;
 }
 
  .main_links {
   position: relative;
   bottom: 70px;
+  font-style: bold;
+  font-family: Arial
 }
 
 .listing {
@@ -41,11 +46,14 @@ top: 1500px;
 .simple_search {
   position: absolute;
       left: 0;
-      top: 50%;
+      top: 110%;
       transform: translateY(-50%);
       right: 0;
       margin: auto;
-      text-align: center;
+      width: 190px;
+    height: 40px;
+    text-align: center;
+    color: black;
 }
 .search_link {
 position: absolute;
@@ -53,20 +61,32 @@ left: 56pc;
 top: 3pc;
 }
 
+#search {
+  width: 160px;
+}
+#search_button {
+  position: absolute;
+left: 184px;
+height: 28px;
+}
 .about_me {
   float: left;
   width: 550px;
-  margin-top: 88px;
+  margin-top: 145px;
+  height: 493px;
+  color: white;
+  font-size: 19px;
 }
 #dave_1 {
-  width: 624px;
+  width: 550px;
   height: auto;
-  float: left;
+  float: right;
   left: 576px;
   position: relative;
-  bottom: 369px;
-  border: 34px solid #021a40;
-  padding: 13px;
+  bottom: 406px;
+  border: 10px solid white;
+  padding: 4px;
+  background: black
 }
 
 #main_listing_photo{
@@ -82,6 +102,8 @@ top: 3pc;
       background-position: 50% 50%;
       background-repeat: no-repeat;
       background-size: cover;
+      border: 3px solid #021a40;
+
     }
 .main_title {
       text-align: center;
@@ -107,8 +129,27 @@ margin: auto;
 .links>li{
   float: left;
   padding: 7px;
+  font-family: Arial
 }
 
+.admin_link {
+position: absolute;
+bottom: 0pt;
+right: 0pt;"
+
+}
+a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 17px;
+  color: white !important;
+}
+
+
+#listing_description{
+  width: 500px;
+  height: 100px;
+}
 #header>div>div:nth-child(1),#header>div>div:nth-child(3){
     margin-top: 25px;
 }
