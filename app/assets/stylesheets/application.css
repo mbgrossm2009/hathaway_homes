@@ -118,7 +118,6 @@ left: 56pc;
 #logo{
   width: 100%;
 max-width:100px;
-
 margin: auto;
 }
 #header{
@@ -135,8 +134,7 @@ margin: auto;
 .admin_link {
 position: absolute;
 bottom: 0pt;
-right: 0pt;"
-
+right: 0pt;
 }
 a {
   text-decoration: none;
