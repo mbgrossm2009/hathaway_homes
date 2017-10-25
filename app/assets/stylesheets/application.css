@@ -27,8 +27,9 @@ html, body {
  }
 
 .my_listings{
-position: relative;
-top: 730px;
+  position: absolute;
+  top: 1250px;
+  margin-left: 40%;
 }
 
  .main_links {
@@ -76,17 +77,18 @@ height: 28px;
   height: 493px;
   color: white;
   font-size: 19px;
+  margin-left: 46px;
 }
 #dave_1 {
   width: 550px;
   height: auto;
   float: right;
-  left: 576px;
+  right: 50px;
   position: relative;
-  bottom: 406px;
   border: 10px solid white;
   padding: 4px;
-  background: black
+  background: black;
+  top: 148px;
 }
 
 #main_listing_photo{
@@ -154,5 +156,72 @@ a {
 
 ul {
   list-style-type: none;
+}
 
+.new_registration_input {
+
+  padding: 3px;
+}
+
+
+.string.required{
+  margin-right: 10px;
+}
+.tel.required{
+  margin-right: 10px;
+
+}
+.email.required{
+  margin-right: 10px;
+
+}
+
+.password.required{
+  margin-right: 10px;
+
+}
+.registration_title {
+  text-align: center;
+}
+
+.sign_up {
+  position: relative;
+  left: 40%;
+  top: 53px;
+
+}
+
+.log_in {
+  position: relative;
+  left: 43%;
+  top: 12%;
+}
+
+.log_in_title {
+  position: relative;
+  left: 43%;
+}
+.new_form{
+  border-style: double;
+height: 399px;
+border-width: 12px;
+}
+
+#user_email{
+  color:black
+}
+#user_password{
+  color:black;
+}
+#user_first_name{
+  color:black;
+}
+#user_last_name{
+  color:black;
+}
+#user_phone_number{
+  color:black;
+}
+#user_password_confirmation{
+  color:black;
 }

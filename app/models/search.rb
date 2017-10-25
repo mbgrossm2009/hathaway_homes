@@ -9,7 +9,7 @@ class Search < ApplicationRecord
        listings = Listing.all
        listings = Listing.where("house_style ILIKE ?", "%#{house_style}%") if house_style.present?
        listings = Listing.where("street_address ILIKE ?", "%#{street_address}%") if street_address.present?
-      listings = Listing.where("town ILIKE ?", "%#{town}%") if town.present?
+       listings = Listing.where("town ILIKE ?", "%#{town}%") if town.present?
        listings = Listing.where("State ILIKE ?", "%#{state}%") if state.present?
        listings = Listing.where("zipcode ILIKE ?", "%#{zipcode}%") if zipcode.present?
        listings = Listing.where("square_footage ILIKE ?", "%#{square_footage}%") if square_footage.present?
