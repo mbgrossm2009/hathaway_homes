@@ -13,215 +13,338 @@
  *= require_tree .
  *= require_self
  */
+
 html, body {
-  background-color: #4D5259 !important;
-  color: white !important;
-
- }
-
- .background_image {
-   background-image: url(homepage_pic.png);
-   min-height: 400px;
-   background-size: cover;
-   position: relative;
- }
-
-.my_listings{
-  position: absolute;
-  top: 1250px;
-  margin-left: 40%;
+    background-color: #4D5259 !important;
+    color: white !important;
 }
 
- .main_links {
-  position: relative;
-  bottom: 70px;
-  font-style: bold;
-  font-family: Arial
+.background_image {
+    background-image: url(homepage_pic.png);
+    min-height: 400px;
+    background-size: cover;
+    position: relative;
+    background-position: 4px, 30px;
+}
+
+.my_listings {
+    position: absolute;
+    top: 1250px;
+    margin-left: 40%;
+}
+
+.main_links {
+    position: relative;
+    bottom: 70px;
+    font-style: bold;
+    font-family: Arial
 }
 
 .listing {
-position: absolute;
-top: 1500px;
+    position: absolute;
+    top: 1251px;
+    width: 1235px;
+    height: auto;
+    border-width: 11px;
+    padding-top: 100px;
+    padding-left: 64px;
+    border: 13px double white
 }
 
+
 .simple_search {
-  position: absolute;
-      left: 0;
-      top: 110%;
-      transform: translateY(-50%);
-      right: 0;
-      margin: auto;
-      width: 190px;
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transform: translateY(-50%);
+    right: 0;
+    margin: auto;
+    width: 190px;
     height: 40px;
     text-align: center;
     color: black;
 }
+
+.welcome_title {
+    text-align: center;
+}
+
 .search_link {
-position: absolute;
-left: 56pc;
-top: 3pc;
+    position: absolute;
+    left: 56pc;
+    top: 3pc;
 }
 
 #search {
-  width: 160px;
+  position: relative;
+top: 32px;
+right: 29px;
+width: 200px;
+color: black;
 }
+
 #search_button {
   position: absolute;
-left: 184px;
-height: 28px;
+  left: 175px;
+  height: 27px;
+  top: 31px;
+  color: black;
+  width: 100px;
 }
+
 .about_me {
-  float: left;
-  width: 550px;
-  margin-top: 145px;
-  height: 493px;
-  color: white;
-  font-size: 19px;
-  margin-left: 46px;
+    float: left;
+    width: 550px;
+    margin-top: 145px;
+    height: 493px;
+    color: white;
+    font-size: 19px;
+    margin-left: 46px;
 }
+
 #dave_1 {
   width: 550px;
   height: auto;
   float: right;
   right: 50px;
   position: relative;
-  border: 10px solid white;
+  border: 10px double white;
   padding: 4px;
   background: black;
   top: 148px;
+  border-radius: 93%;
 }
 
-#main_listing_photo{
-  width: 200px;
-  border: 3px solid #021a40;
-  padding: 2px;
+#main_listing_photo {
+    width: 200px;
+    border: 3px solid #021a40;
+    padding: 2px;
 }
 
 #all_photos {
-  position: relative;
-      width: 175px;
-      height: 175px;
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
-      background-size: cover;
-      border: 3px solid #021a40;
+    position: relative;
+    width: 175px;
+    height: 175px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 3px solid #021a40;
+}
 
-    }
+
 .main_title {
-      text-align: center;
-      position: absolute;
-      top: 60px;
-      left: 400px;
+    text-align: center;
+    position: absolute;
+    top: 60px;
+    left: 400px;
 }
+
 .about_me_link {
-  position: absolute;
-left: 56pc;
+    position: absolute;
+    left: 56pc;
 }
-#logo{
-  width: 100%;
-max-width:100px;
-margin: auto;
+
+#logo {
+    width: 100%;
+    max-width: 100px;
+    margin: auto;
 }
-#header{
-  margin-top: 15px;
-  max-width: 1200px;
-  margin: auto;
+
+#header {
+    margin-top: 15px;
+    max-width: 1200px;
+    margin: auto;
 }
-.links>li{
-  float: left;
-  padding: 7px;
-  font-family: Arial
+
+.links>li {
+    float: left;
+    padding: 7px;
+    font-family: Arial
 }
 
 .admin_link {
-position: absolute;
-bottom: 0pt;
-right: 0pt;
+    position: relative;
+    float: right;
+    bottom: 48px;
+    right: 51px;
 }
+.admin{
+
+}
+
 a {
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 17px;
-  color: white !important;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17px;
+    color: white !important;
 }
 
-
-#listing_description{
-  width: 500px;
-  height: 100px;
+#listing_description {
+    width: 500px;
+    height: 100px;
 }
-#header>div>div:nth-child(1),#header>div>div:nth-child(3){
+
+#header>div>div:nth-child(1), #header>div>div:nth-child(3) {
     margin-top: 25px;
 }
 
 ul {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 .new_registration_input {
-
-  padding: 3px;
+    padding: 3px;
 }
 
-
-.string.required{
-  margin-right: 10px;
-}
-.tel.required{
-  margin-right: 10px;
-
-}
-.email.required{
-  margin-right: 10px;
-
+.string.required {
+    margin-right: 10px;
 }
 
-.password.required{
-  margin-right: 10px;
-
+.tel.required {
+    margin-right: 10px;
 }
+
+.email.required {
+    margin-right: 10px;
+}
+
+.password.required {
+    margin-right: 10px;
+}
+
 .registration_title {
-  text-align: center;
+    text-align: center;
 }
 
 .sign_up {
-  position: relative;
-  left: 40%;
-  top: 53px;
-
+    position: relative;
+    left: 40%;
+    top: 53px;
 }
 
 .log_in {
-  position: relative;
-  left: 43%;
-  top: 12%;
+    position: relative;
+    left: 43%;
+    top: 12%;
 }
 
 .log_in_title {
-  position: relative;
-  left: 43%;
-}
-.new_form{
-  border-style: double;
-height: 399px;
-border-width: 12px;
+    position: relative;
+    left: 43%;
 }
 
-#user_email{
-  color:black
+.new_form {
+    border-style: double;
+    height: 399px;
+    border-width: 12px;
 }
-#user_password{
-  color:black;
+
+.additional_resources {
+    border-style: double;
 }
-#user_first_name{
-  color:black;
+
+.searches {
+    border-style: double;
+    border-width: 10px;
+    width: 616px;
+    position: relative;
+    left: 33%;
+    top: 57px;
 }
-#user_last_name{
-  color:black;
+
+.advanced_search_input {
+    margin-top: 25px;
+    color: black;
 }
-#user_phone_number{
-  color:black;
+.adv_sea{
+  color:white;
+  margin-right:10px;
 }
-#user_password_confirmation{
-  color:black;
+
+label {
+  margin-right: 10px;
+}
+.advanced_title {
+    position: relative;
+    text-align: center;
+}
+
+.listings_border {
+    border-style: double;
+}
+
+.no_results {
+    position: relative;
+    right: 260px;
+    top: 16px;
+}
+
+#user_email {
+    color: black
+}
+
+#user_password {
+    color: black;
+}
+
+#user_first_name {
+    color: black;
+}
+
+#user_last_name {
+    color: black;
+}
+
+#user_phone_number {
+    color: black;
+}
+
+#user_password_confirmation {
+    color: black;
+}
+
+#listing_street_address {
+    color: black;
+}
+
+#listing_state {
+    color: black;
+}
+
+#listing_town {
+    color: black;
+}
+
+#listing_zipcode {
+    color: black;
+}
+
+#listing_number_of_bathrooms {
+    color: black;
+}
+
+#listing_number_of_bedrooms {
+    color: black;
+}
+
+#listing_square_footage {
+    color: black;
+}
+
+#listing_asking_price {
+    color: black;
+}
+
+#listing_house_style {
+    color: black;
+}
+
+#listing_description {
+    color: black;
+}
+
+#add_listing_homepage {
+    left: 41%;
+    position: relative;
+    bottom: 46px;
 }

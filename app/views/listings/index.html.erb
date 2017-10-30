@@ -1,4 +1,4 @@
-
+<h1 class = "welcome_title"> Welcome to HathawayHomes-MA </h1>
 <div class = "background_image">
   <div class = "simple_search">
        <%= form_tag(listings_path, :method => "get", id: "search_form") do %>
@@ -6,7 +6,8 @@
         <%= submit_tag "Search", :name => nil, id: 'search_button' %>
       <% end %>
     </div>
-</div>
+  </div>
+
 <div class = "about_me">
 About Dave:
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -14,8 +15,8 @@ About Dave:
 </div>
 <%=image_tag("dave1.png", alt: "Example Image", id: 'dave_1')%>
 
-
 <h1 class = "my_listings"> My Listings </h1>
+<%= link_to "Add a listing", new_listing_path, id: 'add_listing_homepage' %>
 <div class = "my_listings_list">
   <ul class= "listing">
     <% @listings.each do |listing| %>
@@ -25,12 +26,17 @@ About Dave:
     <li>State: <%= listing.state%></li>
     <li>Zipcode: <%= listing.zipcode%></li>
     <li> Description: <%= listing.description%> </li>
-    <% listing.listing_photo.each_with_index do |photo, index| %>
-      <% if index == 0 %>
+      <% listing.listing_photo.each_with_index do |photo, index| %>
+        <% if index == 0 %>
         <li><%= image_tag(photo.url, id: "main_listing_photo") %></li>
       <% end %>
     <% end %>
-    <%= link_to 'More Information', listing %>
+    <li><%= link_to 'More Information', listing %></li>
    <% end %>
+
   </ul>
 </div>
+
+  <% if @listings.blank? %>
+	    <h4 class = "no_results">There are no cell phones containing the term <%= params[:search] %>.</h4>
+    <% end %>
