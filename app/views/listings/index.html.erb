@@ -9,34 +9,39 @@
   </div>
 
 <div class = "about_me">
-About Dave:
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 </div>
 <%=image_tag("dave1.png", alt: "Example Image", id: 'dave_1')%>
 
 <h1 class = "my_listings"> My Listings </h1>
 <%= link_to "Add a listing", new_listing_path, id: 'add_listing_homepage' %>
-<div class = "my_listings_list">
-  <ul class= "listing">
-    <% @listings.each do |listing| %>
+
+<ul class= "listing">
+
+  <% @listings.each do |listing| %>
+  <div class = "listing-info">
+    <div class = "row">
+      <div class = "col-lg-1">
+        <% listing.listing_photo.each_with_index do |photo, index| %>
+          <% if index == 0 %>
+            <li><%= image_tag(photo.url, id: "all_photos") %></li>
+         <% end %>
+        <% end %>
     <li>House Style: <%= listing.house_style %></li>
     <li>Street Address: <%= listing.street_address%></li>
     <li>Town: <%= listing.town%> </li>
     <li>State: <%= listing.state%></li>
     <li>Zipcode: <%= listing.zipcode%></li>
     <li> Description: <%= listing.description%> </li>
-      <% listing.listing_photo.each_with_index do |photo, index| %>
-        <% if index == 0 %>
-        <li><%= image_tag(photo.url, id: "main_listing_photo") %></li>
-      <% end %>
-    <% end %>
-    <li><%= link_to 'More Information', listing %></li>
-   <% end %>
 
-  </ul>
-</div>
+        <li><%= link_to 'More Information', listing %></li>
+      </div>
+    </div>
+    </div>
+    <% end %>
+</ul>
+
 
   <% if @listings.blank? %>
-	    <h4 class = "no_results">There are no cell phones containing the term <%= params[:search] %>.</h4>
-    <% end %>
+      <h4 class = "no_results">There are no listings containing the term <%= params[:search] %></h4>
+  <% end %>

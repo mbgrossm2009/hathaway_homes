@@ -74,7 +74,9 @@ html, body {
     left: 56pc;
     top: 3pc;
 }
+.listing li {
 
+}
 #search {
   position: relative;
 top: 32px;
@@ -83,6 +85,9 @@ width: 200px;
 color: black;
 }
 
+.row {
+  float: left;
+}
 #search_button {
   position: absolute;
   left: 175px;
@@ -100,6 +105,7 @@ color: black;
     color: white;
     font-size: 19px;
     margin-left: 46px;
+    font-family: fantasy;
 }
 
 #dave_1 {
@@ -139,7 +145,7 @@ color: black;
     left: 400px;
 }
 
-.about_me_link {
+._link {
     position: absolute;
     left: 56pc;
 }
@@ -278,7 +284,15 @@ label {
     right: 260px;
     top: 16px;
 }
+#google_maps {
+  position: relative;
+  left: 52%;
+  width: 488px;
+  height: 390px;
+  bottom: 365px;
+}
 
+}
 #user_email {
     color: black
 }

@@ -36,15 +36,13 @@
             <li> <%= link_to "Advanced Search", new_search_path %> </li>
             <li> <%= link_to "Reviews", reviews_path %> </li>
             <li> <%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
-      </ul>
+            <li><%= link_to "Admin Page", users_path %> </li>
+
+        </ul>
     </div>
     </div>
     </div>
 
-
-<div class = "admin_link">
-   <%= link_to "Admin Page", users_path %> </li>
- </div>
 
 
     <% if flash.any? %>
