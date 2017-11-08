@@ -8,20 +8,25 @@
     <li>Number of Bathrooms: <%= @listing.number_of_bathrooms%></li>
     <li>Number of Bedrooms: <%= @listing.number_of_bedrooms%></li>
     <li>Asking Price: $<%= @listing.asking_price%></li>
-    <li><% @listing.listing_photo.each do |photo| %>
-    <%= image_tag(photo.url, id: 'all_photos') %>
+    <div class = "pics container-fluid">
+      <div class="col-lg-6 col-sm-12 pictures">
+    <% @listing.listing_photo.each do |photo| %>
+    <li><%= image_tag(photo.url, id: 'listing_photos') %></li>
     <% end %>
+  </div>
+</div>
   </ul>
-
+<div class = "maps container-fluid">
+<div class ="col-lg-6 col-sm-12 google_maps">
   <iframe
-    id = "google_maps"
     width="600"
     height="450"
     frameborder="0" style="border:0"
     src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCETOh7Po4OZrJn86i3bkINY1pOuDcOijM
       &q=<%=@listing.street_address %>,<%=@listing.town%>,<%=@listing.state%>" allowfullscreen>
   </iframe>
-
+</div>
+</div>
   <div class= "edit_delete_links">
     <% if current_user == @listing.user  || @listing.user.admin?%>
       <%= link_to "Edit Listing info here", edit_listing_path(@listing) %>

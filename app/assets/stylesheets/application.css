@@ -18,18 +18,19 @@ html, body {
     color: white !important;
 }
 
+.all_body {
+    background-color: #4D5259;
+}
+
 .background_image {
-  background-image: url(homepage_pic.png);
-  min-height: 400px;
-  background-size: cover;
-  position: relative;
-  background-position: 4px, 30px;
-
+    background-image: url(homepage_pic.png);
+    min-height: 400px;
+    background-size: cover;
+    position: relative;
+    background-position: 4px, 30px;
 }
 
-.my_listings {
 
-}
 
 .main_links {
     position: relative;
@@ -38,16 +39,12 @@ html, body {
     font-family: Arial
 }
 
-
 .listingsection {
-
     height: auto;
     border-width: 11px;
-
     border: 13px double white;
     background-color: #496D69;
 }
-
 
 .simple_search {
     position: absolute;
@@ -63,11 +60,11 @@ html, body {
 }
 
 .welcome_title {
-  text-align: center;
-  position: absolute;
-  top: 10%;
-  left: 0;
-  right: 0;
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
 }
 
 .search_link {
@@ -75,42 +72,43 @@ html, body {
     left: 56pc;
     top: 3pc;
 }
-.listing li {
 
-}
+.listing li {}
+
 #search {
-      zoom: 1.5;
-  position: relative;
-width: 200px;
-color: black;
+    zoom: 1.5;
+    position: relative;
+    width: 200px;
+    color: black;
 }
 
-.row {
-}
+.row {}
+
 #search_button {
-  position: relative;
-  height: 40px;
-  top: -4px;
-  color: black;
-  width: 100px;
+    position: relative;
+    height: 40px;
+    top: -4px;
+    color: black;
+    width: 100px;
 }
 
 .about_me {
-color:white;
-margin-top: 200px;
+    color: white;
+    margin-top: 200px;
+}
 
+.dave1 {
+    text-align: center;
 }
-.dave1{
-  text-align: center;
-}
+
 #dave_1 {
-  max-width: 300px;
-margin: auto;
-border: 10px double white;
-padding: 4px;
-background: black;
-margin-top: 30px;
-border-radius: 92%;
+    max-width: 300px;
+    margin: auto;
+    border: 10px double white;
+    padding: 4px;
+    background: black;
+    margin-top: 30px;
+    border-radius: 92%;
 }
 
 #main_listing_photo {
@@ -129,6 +127,16 @@ border-radius: 92%;
     border: 3px solid #021a40;
 }
 
+#listing_photos {
+  position: relative;
+  width: 175px;
+  height: 175px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 3px solid #021a40;
+  margin: 6px;
+}
 
 .main_title {
     text-align: center;
@@ -153,7 +161,6 @@ border-radius: 92%;
     max-width: 100%;
     margin: auto;
     background-color: #4D5259 !important;
-
 }
 
 .links>li {
@@ -168,9 +175,8 @@ border-radius: 92%;
     bottom: 48px;
     right: 51px;
 }
-.admin{
 
-}
+.admin {}
 
 a {
     text-decoration: none;
@@ -234,47 +240,50 @@ ul {
 }
 
 .new_form {
-border-style: double;
-height: 399px;
-border-width: 12px;
-position: relative;
-top: 100px;
+    border-style: double;
+    height: 399px;
+    border-width: 12px;
+    position: relative;
+    top: 100px;
 }
 
 .additional_resources {
-  border-style: double;
-  position: absolute;
-  top: 269px;
-  padding: 20px;
-  margin-right: 50px;
+    border-style: double;
+    position: absolute;
+    top: 269px;
+    padding: 20px;
+    margin-right: 50px;
 }
 
 .admin_page {
-  position: relative;
-  top: 120px;
-
+    position: relative;
+    top: 120px;
 }
+
 .searches {
-border-style: double;
-border-width: 10px;
-width: 616px;
-position: relative;
-left: 25%;
-top: 78px;
+    border-style: double;
+    background-color: #4D5259;
+    border-width: 10px;
+    width: 616px;
+    position: relative;
+    left: 25%;
+    top: 78px;
 }
 
 .advanced_search_input {
     margin-top: 25px;
     color: black;
 }
-.adv_sea{
-  color:white;
-  margin-right:10px;
+
+.adv_sea {
+    color: white;
+    margin-right: 10px;
 }
 
 label {
-  margin-right: 10px;
+    margin-right: 10px;
 }
+
 .advanced_title {
     position: relative;
     text-align: center;
@@ -289,14 +298,28 @@ label {
     right: 260px;
     top: 16px;
 }
-#google_maps {
-  position: relative;
-  left: 52%;
-  width: 488px;
-  height: 390px;
-  bottom: 365px;
+.review{
+  border-style: double;
+width: 10%;
+margin-right: 8%;
+}
+.submit {
+  color:black;
+}
+}
+.maps {
+    float: right;
+    position: absolute;
+    left: 48%;
+    bottom: -55px;
+}
+#like {
+  color: black;
 }
 
+#dislike {
+  color: black;
+}
 
 #user_email {
     color: black
@@ -367,14 +390,16 @@ label {
     position: relative;
     bottom: 46px;
 }
-.container-fluid{
-  padding: 0;
-}
-.about_section{
-  position: relative;
-  background-color: #4D5259;
+
+.container-fluid {
+    padding: 0;
 }
 
-.listing_description{
-  word-wrap: break-word;
+.about_section {
+    position: relative;
+    background-color: #4D5259;
+}
+
+.listing_description {
+    word-wrap: break-word;
 }

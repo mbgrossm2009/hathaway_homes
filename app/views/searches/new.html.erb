@@ -1,3 +1,5 @@
+<body class = "all_body">
+
 <div class = "searches">
 <h1 class= "advanced_title"> Advanced Search </h1>
 
@@ -12,7 +14,8 @@
     <li class = "adv_sea"><%= f.label :number_of_bedrooms, "Number of Bedrooms:" %> <%= f.select :number_of_bedrooms,(0..10).to_a  %></li>
   <li class = "adv_sea"><%= f.label :square_footage, "Square Footage:" %>  <%= f.text_field :square_footage %></li>
     <li class = "adv_sea"><%= f.label :min_price, "Price Range" %> $<%= f.text_field :min_price, size: 10 %>- $<%= f.text_field :max_price, size: 10 %></li>
-    <li class = "adv_sea"> <%=f.submit "Search Listings" %> </li>
+    <li class = "adv_sea"> <%=f.submit "Search Listings", class: "submit" %> </li>
 </ul>
   <% end %>
 </div>
+</body>
