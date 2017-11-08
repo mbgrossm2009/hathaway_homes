@@ -15,22 +15,20 @@
  */
 
 html, body {
-    background-color: #4D5259 !important;
     color: white !important;
 }
 
 .background_image {
-    background-image: url(homepage_pic.png);
-    min-height: 400px;
-    background-size: cover;
-    position: relative;
-    background-position: 4px, 30px;
+  background-image: url(homepage_pic.png);
+  min-height: 400px;
+  background-size: cover;
+  position: relative;
+  background-position: 4px, 30px;
+
 }
 
 .my_listings {
-    position: absolute;
-    top: 1250px;
-    margin-left: 40%;
+
 }
 
 .main_links {
@@ -40,33 +38,36 @@ html, body {
     font-family: Arial
 }
 
-.listing {
-    position: absolute;
-    top: 1251px;
-    width: 1235px;
+
+.listingsection {
+
     height: auto;
     border-width: 11px;
-    padding-top: 100px;
-    padding-left: 64px;
-    border: 13px double white
+
+    border: 13px double white;
+    background-color: #496D69;
 }
 
 
 .simple_search {
     position: absolute;
     left: 0;
-    top: 110%;
+    top: 50%;
     transform: translateY(-50%);
     right: 0;
     margin: auto;
-    width: 190px;
+    width: 450px;
     height: 40px;
     text-align: center;
     color: black;
 }
 
 .welcome_title {
-    text-align: center;
+  text-align: center;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
 }
 
 .search_link {
@@ -78,47 +79,38 @@ html, body {
 
 }
 #search {
+      zoom: 1.5;
   position: relative;
-top: 32px;
-right: 29px;
 width: 200px;
 color: black;
 }
 
 .row {
-  float: left;
 }
 #search_button {
-  position: absolute;
-  left: 175px;
-  height: 27px;
-  top: 31px;
+  position: relative;
+  height: 40px;
+  top: -4px;
   color: black;
   width: 100px;
 }
 
 .about_me {
-    float: left;
-    width: 550px;
-    margin-top: 145px;
-    height: 493px;
-    color: white;
-    font-size: 19px;
-    margin-left: 46px;
-    font-family: fantasy;
-}
+color:white;
+margin-top: 200px;
 
+}
+.dave1{
+  text-align: center;
+}
 #dave_1 {
-  width: 550px;
-  height: auto;
-  float: right;
-  right: 50px;
-  position: relative;
-  border: 10px double white;
-  padding: 4px;
-  background: black;
-  top: 148px;
-  border-radius: 93%;
+  max-width: 300px;
+margin: auto;
+border: 10px double white;
+padding: 4px;
+background: black;
+margin-top: 30px;
+border-radius: 92%;
 }
 
 #main_listing_photo {
@@ -158,8 +150,10 @@ color: black;
 
 #header {
     margin-top: 15px;
-    max-width: 1200px;
+    max-width: 100%;
     margin: auto;
+    background-color: #4D5259 !important;
+
 }
 
 .links>li {
@@ -240,22 +234,33 @@ ul {
 }
 
 .new_form {
-    border-style: double;
-    height: 399px;
-    border-width: 12px;
+border-style: double;
+height: 399px;
+border-width: 12px;
+position: relative;
+top: 100px;
 }
 
 .additional_resources {
-    border-style: double;
+  border-style: double;
+  position: absolute;
+  top: 269px;
+  padding: 20px;
+  margin-right: 50px;
 }
 
+.admin_page {
+  position: relative;
+  top: 120px;
+
+}
 .searches {
-    border-style: double;
-    border-width: 10px;
-    width: 616px;
-    position: relative;
-    left: 33%;
-    top: 57px;
+border-style: double;
+border-width: 10px;
+width: 616px;
+position: relative;
+left: 25%;
+top: 78px;
 }
 
 .advanced_search_input {
@@ -361,4 +366,15 @@ label {
     left: 41%;
     position: relative;
     bottom: 46px;
+}
+.container-fluid{
+  padding: 0;
+}
+.about_section{
+  position: relative;
+  background-color: #4D5259;
+}
+
+.listing_description{
+  word-wrap: break-word;
 }
