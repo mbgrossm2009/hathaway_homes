@@ -7,40 +7,40 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 
 
 
+
   <body class = "all_body">
-    <div id="header" class="container-fluid">
-      <div class="row" id = "homepage_row">
-        <div class="col-lg-5">
-          <ul class="links">
-              <li><%= link_to "About Dave", about_me_index_path%></li>
-              <li> <%= link_to "HomePage", listings_path %> </li>
-              <li> <%= link_to "Additional Resources", additional_links_path %> </li>
-          </ul>
-        </div>
-        <div class="col-lg-2">
-          <%=image_tag("logo.png", alt: "Example Image", id: 'logo')%>
-        </div>
-      <div class="col-lg-5">
-        <ul  class=" links ">
-        <% if !user_signed_in? %>
-          <li><%= link_to 'Sign In', new_user_session_path %></li>
-          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-        <% end %>
-            <li> <%= link_to "Advanced Search", new_search_path %> </li>
-            <li> <%= link_to "Reviews", reviews_path %> </li>
-            <li> <%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
-            <li><%= link_to "Admin Page", users_path %> </li>
-
-        </ul>
+    <% if current_page?(listings_path) %>
+      <h1 class = "welcome_title"> Welcome to HathawayHomes-MA </h1>
+    <% else %>
+      <div class="row text-center">
+        <br><%=image_tag("logo2.png", alt: "Example Image", id: 'logo')%>
+      </div>
+    <% end %>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <%=image_tag("threelines.png", alt: "Example Image", id: 'threelines') %>
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <ul class = "dropdownn">
+          <li><a class="dropdown-item"><%= link_to "About Dave", about_me_index_path%></a></li>
+          <li><a class="dropdown-item"><%= link_to "HomePage", listings_path %></a></li>
+          <li><a class="dropdown-item"><%= link_to "Additional Resources", additional_links_path %></a></li>
+            <% if !user_signed_in? %>
+              <li><a class="dropdown-item"><%= link_to 'Sign In', new_user_session_path %></a></li>
+              <li><a class="dropdown-item"><%= link_to 'Sign Up', new_user_registration_path %></a></li>
+            <% end %>
+              <li><a class="dropdown-item"><%= link_to "Advanced Search", new_search_path %> </a></li>
+          <li><a class="dropdown-item"><%= link_to "Reviews", reviews_path %> </a></li>
+          <li><a class="dropdown-item"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></a></li>
+          <li><a class="dropdown-item"><%= link_to "Admin Page", users_path %> </a></li>
+      </ul>
+      </div>
     </div>
-    </div>
-    </div>
-
-
 
     <% if flash.any? %>
       <div class="flash">
@@ -51,3 +51,34 @@
 
   </body>
 </html>
+
+
+
+<!-- <div id="header" class="container-fluid">
+  <div class="row" id = "homepage_row">
+    <div class="col-lg-5">
+      <ul class="links">
+          <li><%= link_to "About Dave", about_me_index_path%></li>
+          <li> <%= link_to "HomePage", listings_path %> </li>
+          <li> <%= link_to "Additional Resources", additional_links_path %> </li>
+      </ul>
+    </div>
+    <div class="col-lg-2">
+      <%=image_tag("logo2.png", alt: "Example Image", id: 'logo')%>
+    </div>
+  <div class="col-lg-5">
+    <ul  class=" links ">
+    <% if !user_signed_in? %>
+      <li><%= link_to 'Sign In', new_user_session_path %></li>
+      <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+    <% end %>
+        <li> <%= link_to "Advanced Search", new_search_path %> </li>
+        <li> <%= link_to "Reviews", reviews_path %> </li>
+        <li> <%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+        <li><%= link_to "Admin Page", users_path %> </li>
+
+    </ul>
+</div>
+
+</div>
+</div> -->

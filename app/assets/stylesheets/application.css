@@ -65,6 +65,7 @@ html, body {
     top: 10%;
     left: 0;
     right: 0;
+    font-size: 45px;
 }
 
 .search_link {
@@ -151,9 +152,10 @@ html, body {
 }
 
 #logo {
-    width: 100%;
-    max-width: 100px;
-    margin: auto;
+  max-width: 248px;
+  margin: auto;
+  width: 248px;
+
 }
 
 #header {
@@ -313,6 +315,26 @@ margin-right: 8%;
     left: 48%;
     bottom: -55px;
 }
+.dropdown-menu {
+  background-color: #44484F !important;
+}
+
+.dropdownn li {
+  border-style: groove;
+padding: 13px;
+margin-left: -38px;
+}
+
+#dropdownMenuButton {
+    background-color: #44484F;
+}
+
+#threelines {
+  width: 44px;
+}
+
+
+
 #like {
   color: black;
 }
