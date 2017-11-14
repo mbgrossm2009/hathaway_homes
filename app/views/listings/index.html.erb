@@ -1,12 +1,7 @@
 
 <div class = "background_image">
-  <% if current_page?(root_path) %>
-    <h1 class = "welcome_title"> Welcome to HathawayHomes-MA </h1>
-  <% else %>
-    <div class="row text-center">
-      <br><%=image_tag("logo2.png", alt: "Example Image", id: 'logo')%>
-    </div>
-  <% end %>
+  <h1 class = "welcome_title"> Welcome to HathawayHomes-MA </h1>
+
   <div class = "simple_search">
        <%= form_tag(listings_path, :method => "get", id: "search_form") do %>
         <%= text_field_tag :search, params[:search], placeholder: "Quick Search of Listings" %>

@@ -14,13 +14,7 @@
 
 
   <body class = "all_body">
-    <% if current_page?(listings_path) %>
-      <h1 class = "welcome_title"> Welcome to HathawayHomes-MA </h1>
-    <% else %>
-      <div class="row text-center">
-        <br><%=image_tag("logo2.png", alt: "Example Image", id: 'logo')%>
-      </div>
-    <% end %>
+
     <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <%=image_tag("threelines.png", alt: "Example Image", id: 'threelines') %>
@@ -38,9 +32,15 @@
           <li><a class="dropdown-item"><%= link_to "Reviews", reviews_path %> </a></li>
           <li><a class="dropdown-item"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></a></li>
           <li><a class="dropdown-item"><%= link_to "Admin Page", users_path %> </a></li>
-      </ul>
+        </ul>
       </div>
     </div>
+    
+    <% if !current_page?(listings_path) %>
+      <div class="row text-center">
+        <br><%=image_tag("logo2.png", alt: "Example Image", id: 'logo')%>
+      </div>
+    <% end %>
 
     <% if flash.any? %>
       <div class="flash">

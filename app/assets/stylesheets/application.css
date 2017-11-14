@@ -327,11 +327,17 @@ margin-left: -38px;
 
 #dropdownMenuButton {
     background-color: #44484F;
+    padding: 0px;
+  
 }
 
 #threelines {
   width: 44px;
 }
+/*.dropdown {
+bottom: 127px;
+left: 15px;
+}*/
 
 
 
