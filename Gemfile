@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem "simple_form"
 gem "launchy"
+gem 'sendgrid-ruby'
 gem 'jquery-rails'
 gem 'pg'
 gem "carrierwave", :github => "carrierwaveuploader/carrierwave"
