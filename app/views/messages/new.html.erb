@@ -1,0 +1,13 @@
+<%= form_for @message, url: create_message_url do |f| %>
+  <%= notice %>
+  <%= @message.errors.full_messages.join(', ') %>
+
+<div
+<ul class = "contact-form">
+  <li><%= f.label :name, 'Name'%> <%= f.text_field :name, placeholder: 'name' %></li>
+  <li><%= f.label :email, 'Email'%><%= f.email_field :email, placeholder: 'email' %></li>
+  <li><%= f.label :phone_number, 'Phone Number'%><%= f.text_field :phone_number, placeholder: 'phone_number' %></li>
+  <li><%= f.label :name, 'Message'%><%= f.text_area :body, placeholder: 'message' %></li>
+  <li><%= f.submit 'Send' %></li>
+  <ul>
+<% end %>
