@@ -328,89 +328,19 @@ margin-left: -38px;
 #dropdownMenuButton {
     background-color: #44484F;
     padding: 0px;
-  
+
 }
 
 #threelines {
   width: 44px;
 }
-/*.dropdown {
-bottom: 127px;
-left: 15px;
-}*/
 
-
-
-#like {
+#like,#dislike, #user_email,user_password, #user_first_name,#user_last_name,
+#user_phone_number,#user_password_confirmation,#listing_street_address,#listing_state,
+#listing_town,#listing_zipcode,#listing_number_of_bathrooms,#listing_number_of_bedrooms,
+#listing_square_footage,#listing_asking_price,#listing_house_style,
+#listing_description, #user_password {
   color: black;
-}
-
-#dislike {
-  color: black;
-}
-
-#user_email {
-    color: black
-}
-
-#user_password {
-    color: black;
-}
-
-#user_first_name {
-    color: black;
-}
-
-#user_last_name {
-    color: black;
-}
-
-#user_phone_number {
-    color: black;
-}
-
-#user_password_confirmation {
-    color: black;
-}
-
-#listing_street_address {
-    color: black;
-}
-
-#listing_state {
-    color: black;
-}
-
-#listing_town {
-    color: black;
-}
-
-#listing_zipcode {
-    color: black;
-}
-
-#listing_number_of_bathrooms {
-    color: black;
-}
-
-#listing_number_of_bedrooms {
-    color: black;
-}
-
-#listing_square_footage {
-    color: black;
-}
-
-#listing_asking_price {
-    color: black;
-}
-
-#listing_house_style {
-    color: black;
-}
-
-#listing_description {
-    color: black;
 }
 
 #add_listing_homepage {
@@ -419,6 +349,11 @@ left: 15px;
     bottom: 46px;
 }
 
+#search_house_style, #search_street_address,#search_state,#search_town,#search_zipcode,
+#search_number_of_bathrooms,#search_number_of_bedrooms,
+#search_square_footage,#search_min_price,#search_max_price {
+  color:black;
+}
 .container-fluid {
     padding: 0;
 }

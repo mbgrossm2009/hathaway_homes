@@ -23,7 +23,7 @@
 <div class="listingsection container-fluid">
   <h1 class = "my_listings"> My Listings </h1>
   <% @listings.each do |listing| %>
-    <div class = "col-lg-4 listing-info">
+    <div class = "col-lg-3 listing-info">
           <% listing.listing_photo.each_with_index do |photo, index| %>
             <% if index == 0 %>
               <div class="col-lg-12"><%= image_tag(photo.url, id: "all_photos") %></div>
