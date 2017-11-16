@@ -9,12 +9,13 @@
     <li>Number of Bedrooms: <%= @listing.number_of_bedrooms%></li>
     <li>Asking Price: $<%= @listing.asking_price%></li>
     <div class = "pics container-fluid">
-      <div class="col-lg-6 col-sm-12 pictures">
+
     <% @listing.listing_photo.each do |photo| %>
-    <li><%= image_tag(photo.url, id: 'listing_photos') %></li>
+    <div class = "col-lg-2 ">
+    <li><%= image_tag(photo.url, id: 'listing_photos')%></li>
+  </div>
     <% end %>
   </div>
-</div>
   </ul>
 <div class = "maps container-fluid">
 <div class ="col-lg-6 col-sm-12 google_maps">

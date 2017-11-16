@@ -136,9 +136,12 @@ html, body {
   background-repeat: no-repeat;
   background-size: cover;
   border: 3px solid #021a40;
-  margin: 6px;
+  margin: 1px;
 }
-
+.pics {
+margin-left: 15px;
+margin-top: 86px;
+}
 .main_title {
     text-align: center;
     position: absolute;
