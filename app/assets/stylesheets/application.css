@@ -126,6 +126,7 @@ html, body {
     background-repeat: no-repeat;
     background-size: cover;
     border: 3px solid #021a40;
+    cursor:zoom-in;
 }
 
 #listing_photos {
@@ -252,12 +253,14 @@ ul {
     top: 100px;
 }
 
+.other_resources {
+      margin: 24px;
+}
+
 .additional_resources {
-    border-style: double;
-    position: absolute;
-    top: 269px;
-    padding: 20px;
-    margin-right: 50px;
+  border-style: double;
+width: 1100px;
+margin: 30px;
 }
 
 .admin_page {
@@ -346,12 +349,21 @@ margin-left: -38px;
   color: black;
 }
 
+#dislike {
+}
 #add_listing_homepage {
     left: 41%;
     position: relative;
     bottom: 46px;
 }
 
+.reviews {
+      margin-top: 32px;
+}
+
+.review_description{
+  margin: 15px;
+}
 #search_house_style, #search_street_address,#search_state,#search_town,#search_zipcode,
 #search_number_of_bathrooms,#search_number_of_bedrooms,
 #search_square_footage,#search_min_price,#search_max_price {

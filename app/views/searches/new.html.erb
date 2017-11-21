@@ -1,10 +1,12 @@
-<body class = "all_body">
 
 <div class = "searches">
+  <div class = "container-fluid">
   <h1 class= "advanced_title"> Advanced Search </h1>
 
 <%= form_for @search do |f| %>
+<div class = "col-lg-12">
   <ul class ="advanced_search_input">
+
     <li class = "adv_sea"> <%= f.label :house_style,"House Style:"%><%= f.select :house_style, ['CapeCod', 'Country French', 'Colonial', 'Victorian', 'Tudor', 'Craftsman', 'Cottage', 'Mediterranean', 'Ranch', 'Contemporary', 'Other']%></li>
       <li class = "adv_sea"><%= f.label :street_address,"Street Address:" %>  <%= f.text_field :street_address %></li>
       <li class = "adv_sea"><%= f.label :state, "State:" %>  <%= f.text_field :state %></li>
@@ -18,4 +20,5 @@
   </ul>
 <% end %>
 </div>
-</body>
+</div>
+</div>
