@@ -11,13 +11,13 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-.txt
-.env
+
 
 # Ignore uploaded files in test/development
 /public/uploads
@@ -26,3 +26,5 @@
 /yarn-error.log
 
 .byebug_history
+
+.env
