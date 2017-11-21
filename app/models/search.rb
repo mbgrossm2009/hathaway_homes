@@ -1,6 +1,6 @@
 class Search < ApplicationRecord
   def listings
-    @listings ||= find_listings
+    @listings = find_listings
   end
 
   private
@@ -15,7 +15,8 @@ class Search < ApplicationRecord
        listings = Listing.where("square_footage ILIKE ?", "%#{square_footage}%") if square_footage.present?
        listings = Listing.where("number_of_bedrooms ILIKE ?", "%#{number_of_bedrooms}%") if number_of_bedrooms.present?
        listings = Listing.where("number_of_bathrooms ILIKE ?", "%#{number_of_bathrooms}%") if number_of_bathrooms.present?
-       listings = Listing.where("asking_price ILIKE ?", "#{asking_price}%") if asking_price.present?
+       listings = Listing.where("asking_price >= ?", min_price) if min_price.present?
+       listings = Listing.where("asking_price <= ?", max_price) if max_price.present?
        listings
      end
    end
