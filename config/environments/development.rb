@@ -27,20 +27,7 @@ Rails.application.configure do
   end
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.perform_deliveries = true
 
-  config.action_mailer.delivery_method = :smtp
-   config.action_mailer.perform_deliveries = true
-   ActionMailer::Base.smtp_settings = {
-     :user_name => ENV['SENDGRID_USERNAME'],
-     :password => ENV['SENDGRID_PASSWORD'],
-     :domain => 'heroku.com',
-     :address => 'smtp.sendgrid.net',
-     :port => 587,
-     :authentication => :plain,
-     :enable_starttls_auto => true
-   }
 
   config.action_mailer.perform_caching = false
 
