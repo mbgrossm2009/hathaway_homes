@@ -5,6 +5,6 @@ class MessageMailer < ApplicationMailer
     @name = message.name
     @phone_number = message.phone_number
     @email = message.email
-    mail to: "mattgrossman40@gmail.com", from: message.email
+    mail to: "mattgrossman40@gmail.com", from: "hathawayhomes@mail.com"
   end
 end
