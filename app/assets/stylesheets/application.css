@@ -30,7 +30,9 @@ html, body {
     background-position: 4px, 30px;
 }
 
-
+.message_label{
+  float: left;
+}
 
 .main_links {
     position: relative;
