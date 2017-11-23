@@ -5,11 +5,11 @@
   <% @reviews.each do |review| %>
   <ul class = "col-lg-3 review">
     <div class= "col-lg-10 review_description"> <%= review.description%></div>
-
-    <li><%= button_to 'Like', upvote_review_path(review), method: :post, :id => 'like' %></li>
-    <li><%= button_to 'DisLike', downvote_review_path(review), method: :post, :id => 'dislike' %></li>
-    <li> <%= review.votes.count - review.downvotes.count %> like(s) </li>
-
+    Posted by <%=review.user.first_name review.user.last_name%>
+    <%= "#{review.user.first_name }" "#{review.user.last_name}" %>
+    <!-- <li><%= button_to 'Like', upvote_review_path(review), method: :post, :id => 'like' %></li>
+    # <li><%= button_to 'DisLike', downvote_review_path(review), method: :post, :id => 'dislike' %></li>
+    <li> <%= review.votes.count - review.downvotes.count %> like(s) </li> -->
       <%if current_user == review.user || review.user.admin? %>
         <li><%= link_to "Delete Review", review_path(review), method: :delete,  data: { confirm: "Are you sure you want to delete this Review? (This can not be Undone)" } %></li>
         <li><%= link_to "Edit Review", edit_review_path(review) %></li>

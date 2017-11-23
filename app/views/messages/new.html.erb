@@ -6,8 +6,8 @@
   <li><%= f.label :name, 'Name (First and Last)'%> <%= f.text_field :name, placeholder: 'name' %></li>
   <li><%= f.label :email, 'Email'%><%= f.email_field :email, placeholder: 'email' %></li>
   <li><%= f.label :phone_number, 'Phone Number'%><%= f.text_field :phone_number, placeholder: 'phone_number' %></li>
-  <li><%= f.label :body, 'Message',class: 'message_label'%> <%= f.text_area(:body, cols: 80, rows: 10, class: 'message_body')%></li>
+  <li><%= f.label :body, 'Message',class: 'message_label'%> <%= f.text_area(:body, cols: 80, rows: 10, class: 'message_body', placeholder: "If you are interested in a listing please leave the address of the house")%></li>
 
-  <li><%= f.submit 'Send' %></li>
+  <li><%= f.submit 'Send', id: "message_button" %></li>
   <ul>
 <% end %>

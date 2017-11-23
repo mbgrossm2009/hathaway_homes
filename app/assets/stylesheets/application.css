@@ -347,7 +347,7 @@ margin-left: -38px;
 #user_phone_number,#user_password_confirmation,#listing_street_address,#listing_state,
 #listing_town,#listing_zipcode,#listing_number_of_bathrooms,#listing_number_of_bedrooms,
 #listing_square_footage,#listing_asking_price,#listing_house_style,
-#listing_description, #user_password {
+#listing_description, #user_password,#message_button, #message_name, #message_email, #message_phone_number, #message_body {
   color: black;
 }
 
