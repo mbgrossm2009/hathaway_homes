@@ -30,8 +30,8 @@ html, body {
     background-position: 4px, 30px;
 }
 
-.message_label{
-  float: left;
+.contact {
+      text-align: center;
 }
 
 .main_links {
@@ -53,7 +53,7 @@ html, body {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    right: 0;
+    right: 134;
     margin: auto;
     width: 450px;
     height: 40px;
@@ -81,18 +81,21 @@ html, body {
 #search {
     zoom: 1.5;
     position: relative;
-    width: 200px;
     color: black;
+    width: 335px;
+        right: -201px;
 }
 
 .row {}
 
 #search_button {
-    position: relative;
-    height: 40px;
-    top: -4px;
-    color: black;
-    width: 100px;
+  position: relative;
+  height: 40px;
+  top: -40px;
+  color: black;
+  width: 100px;
+  float: right;
+  left: 454px;
 }
 
 .about_me {
@@ -252,7 +255,7 @@ ul {
     height: 399px;
     border-width: 12px;
     position: relative;
-    top: 100px;
+    top: 60px;
 }
 
 .other_resources {
@@ -303,11 +306,7 @@ label {
     border-style: double;
 }
 
-.no_results {
-    position: relative;
-    right: 260px;
-    top: 16px;
-}
+
 .review{
   border-style: double;
 width: 10%;
