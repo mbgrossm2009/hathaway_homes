@@ -5,8 +5,8 @@
   <% @reviews.each do |review| %>
   <ul class = "col-lg-3 review">
     <div class= "col-lg-10 review_description"> <%= review.description%></div>
-    Posted by <%=review.user.first_name review.user.last_name%>
-    <%= "#{review.user.first_name }" "#{review.user.last_name}" %>
+    Posted by
+    <%= "#{review.user.first_name }"%> <%="#{review.user.last_name}" %>
     <!-- <li><%= button_to 'Like', upvote_review_path(review), method: :post, :id => 'like' %></li>
     # <li><%= button_to 'DisLike', downvote_review_path(review), method: :post, :id => 'dislike' %></li>
     <li> <%= review.votes.count - review.downvotes.count %> like(s) </li> -->
