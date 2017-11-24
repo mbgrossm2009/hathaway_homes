@@ -33,6 +33,13 @@ html, body {
 .contact {
       text-align: center;
 }
+iframe {
+  border: 0;
+width: 500px;
+height: 247px;
+top: -3px;
+position: relative;
+}
 
 .main_links {
     position: relative;
@@ -40,12 +47,17 @@ html, body {
     font-style: bold;
     font-family: Arial
 }
-
+.add_listing {
+  position: relative;
+bottom: 200px;
+margin: 42px;
+}
 .listingsection {
     height: auto;
     border-width: 11px;
     border: 13px double white;
     background-color: #496D69;
+    margin-top: 22px;
 }
 
 .simple_search {
