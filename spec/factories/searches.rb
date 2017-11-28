@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :search do
     keywords "MyString"
     street_address "MyString"

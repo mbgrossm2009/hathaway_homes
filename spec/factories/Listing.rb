@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :listing do
     street_address "8 Valley Brook Rd"
     state "MA"

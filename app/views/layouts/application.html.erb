@@ -35,7 +35,7 @@
       </div>
     </div>
 
-    <% while !current_page?(listings_path) %>
+    <% if !current_page?(listings_path) %>
       <div class="row text-center">
         <br><%=image_tag("logo2.png", alt: "Example Image", id: 'logo')%>
       </div>

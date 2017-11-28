@@ -11,6 +11,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'rails', '~> 5.1.4'
 # Use sqlite3 as the database for Active Record
 # Use Puma as the app server
+gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -47,7 +48,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'selenium-webdriver'
   gem 'rspec-rails'
   gem 'pry-rails'

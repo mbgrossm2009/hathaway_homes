@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'admin can view the users page' do
-  let(:user) {FactoryGirl.create(:user)}
+  let(:user) {FactoryBot.create(:user)}
 
   scenario ' admin views users page' do
     sign_in user

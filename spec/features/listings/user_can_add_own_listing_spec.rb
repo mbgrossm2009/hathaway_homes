@@ -3,7 +3,7 @@ require 'rails_helper'
 
 feature "An authorized user can add his or her own listing" do
 
-  let(:user) {FactoryGirl.create(:user)}
+  let(:user) {FactoryBot.create(:user)}
 
   scenario "Can add own listing" do
 

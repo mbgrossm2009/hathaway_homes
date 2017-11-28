@@ -2,9 +2,9 @@ require 'rails_helper'
 
 
 feature "View index page to see all phones" do
-  let(:user) {FactoryGirl.create(:user)}
-  let!(:listing) {FactoryGirl.create(:listing)}
-  let!(:listing2) {FactoryGirl.create(:listing, town: "Boston")}
+  let(:user) {FactoryBot.create(:user)}
+  let!(:listing) {FactoryBot.create(:listing)}
+  let!(:listing2) {FactoryBot.create(:listing, town: "Boston")}
 
   scenario "View all phones" do
     sign_in user
