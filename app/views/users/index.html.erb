@@ -8,8 +8,9 @@
     <li> Name: <%= user.first_name%> <%=user.last_name%> | Admin: <%= user.admin? %></li>
     <li>Email: <%= user.email %></li>
     <li> Phone Number: <%= user.phone_number%> </li>
-      <% if user != current_user %>
        <%= link_to "Change Admin Status", {action: "make_admin", id: user.id }, method: :put %>
+       <% if user != current_user %>
+
         <%= link_to "Delete this User", users_path, method: :delete, data: { confirm: "You sure?" } %>
         <% end %>
   <%end%>

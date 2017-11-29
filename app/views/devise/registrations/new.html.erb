@@ -4,7 +4,7 @@
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
-  <ul class = "col-lg-2 new_reg"> 
+  <ul class = "col-lg-6 new_reg">
   <li class = "new_registration_input"><%= f.input :first_name, label: 'First Name' , required: true, autofocus: true %></li>
     <li class = "new_registration_input"><%= f.input :last_name, label: 'Last Name ', required: true %></li>
     <li class = "new_registration_input"><%= f.input :phone_number, label: 'Phone Number ', required: true %></li>
@@ -13,9 +13,9 @@
     <li class = "new_registration_input"><%= f.input :password_confirmation, label: "password confirmation ", required: true %></li>
 
     <li class = "new_registration_input"><%= f.button :submit, "Sign up" %></li>
-
-<% end %>
 </ul>
+<% end %>
+
 <!-- <%= render "devise/shared/links" %> -->
 
 </div>
