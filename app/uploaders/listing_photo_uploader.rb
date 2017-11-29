@@ -1,8 +1,5 @@
 class ListingPhotoUploader < CarrierWave::Uploader::Base
 
-  def cache_dir
-     "#{Rails.root}/tmp/uploads"
-   end
 
 
   # Include RMagick or MiniMagick support:
@@ -10,7 +7,12 @@ class ListingPhotoUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
+  if Rails.env.test?
+    storage :file
+  else
+    storage :fog
+  end
+end
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
