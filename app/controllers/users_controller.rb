@@ -17,12 +17,13 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @users = User.all
     @user = User.find(params[:id])
     @user.destroy
-    flash[:success] = "User has been deleted"
+    flash[:alert] = "User has been deleted"
     redirect_to users_path
   end
+
+
 
   def authorize_user
     if !user_signed_in? || !current_user.admin?
