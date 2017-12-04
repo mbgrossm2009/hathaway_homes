@@ -9,35 +9,37 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
-  <!-- <%=image_tag("one_worcester_homes.jpg", alt: "Example Image", id: 'one_homes')%> -->
 
   <body>
+    <a href = "https://www.facebook.com/david.hathaway.944"> <%=image_tag("facebook.png", id: "facebook") %> </a>
+    <a href = "https://www.linkedin.com/in/david-hathaway-23649084/"> <%=image_tag("linkedin.png", id: "facebook") %> </a>
+
     <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <%=image_tag("threelines.png", alt: "Example Image", id: 'threelines') %>
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <ul class = "dropdownn">
-          <li><a class="dropdown-item"><%= link_to "About Dave", about_me_index_path%></a></li>
           <li><a class="dropdown-item"><%= link_to "HomePage", listings_path %></a></li>
           <li><a class="dropdown-item"><%= link_to "Additional Resources", additional_links_path %></a></li>
             <% if !user_signed_in? %>
               <li><a class="dropdown-item"><%= link_to 'Sign In', new_user_session_path %></a></li>
               <li><a class="dropdown-item"><%= link_to 'Sign Up', new_user_registration_path %></a></li>
-              <%elsif user_signed_in?%>
-              <%if current_user.admin? %>
+              <%end%>
+              <%if user_signed_in? && current_user.admin? %>
               <li><a class="dropdown-item"><%= link_to "Admin Page", users_path %> </a></li>
               <%end%>
-              <li><a class="dropdown-item"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></a></li>
-            <% end %>
+
               <li><a class="dropdown-item"><%= link_to "Advanced Search", new_search_path %> </a></li>
           <li><a class="dropdown-item"><%= link_to "Reviews", reviews_path %> </a></li>
-
           <li><a class="dropdown-item"><%= link_to "Contact HathawayHomes", new_message_path %> </a></li>
+          <%if user_signed_in?%>
+          <li><a class="dropdown-item"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></a></li>
+          <% end %>
         </ul>
       </div>
     </div>
-    <% if request.env['PATH_INFO'] !=  "/listings" %>
+    <% if request.env['PATH_INFO'] !=  "/" %>
 
       <div class="row text-center">
         <br><%=image_tag("logo2.png", alt: "Example Image", id: 'logo')%>
@@ -51,6 +53,8 @@
     <% end %>
     <%= yield %>
 
+
+    <%=image_tag("one_worcester_homes.jpg", alt: "Example Image", id: 'one_homes')%>
 
   </body>
 </html>

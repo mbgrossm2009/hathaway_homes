@@ -4,8 +4,7 @@ Rails.application.routes.draw do
 # resources :listings
 resources :homepage
 resources :listings
-resources :about_me, only: [:index]
-resources :reviews do
+ resources :reviews do
   member do
     post 'upvote'
     post 'downvote'

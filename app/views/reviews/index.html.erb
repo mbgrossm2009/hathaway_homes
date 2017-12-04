@@ -2,9 +2,10 @@
 <div class = "text-center"><%= link_to 'Write a Personal Review about Dave', new_review_path%></div>
   <% @reviews.each do |review| %>
   <div class = "reviews container-fluid">
-
-    <div class= "col-lg-12 review_description"> <%= review.description%></div>
-    <div class = "post_by">Posted by: <%= "#{review.user.first_name }"%> </div>
+    <ul>
+    <li><div class= "col-lg-12 review_description"> <%= review.description%></div></li>
+    <li><div class = "post_by">Posted by: <%= "#{review.user.first_name }"%> </div></li>
+  </ul>
     <!-- <li><%= button_to 'Like', upvote_review_path(review), method: :post, :id => 'like' %></li>
     # <li><%= button_to 'DisLike', downvote_review_path(review), method: :post, :id => 'dislike' %></li>
     <li> <%= review.votes.count - review.downvotes.count %> like(s) </li> -->

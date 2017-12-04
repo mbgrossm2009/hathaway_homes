@@ -59,10 +59,18 @@ margin: 42px;
     background-color: #496D69;
     margin-top: 22px;
 }
-/*
-.listing-info{
-      border-bottom-style: double;
-}*/
+.contact-form{
+position: relative;
+margin-top: 15px;
+border-style:double;
+width:auto;
+background-color: #496D69;
+}
+.message_form{
+position: relative;
+left: 29%;
+margin-top: 6%;
+}
 .simple_search {
     position: absolute;
     left: 0;
@@ -97,7 +105,9 @@ margin-top: 41px;
     left: 56pc;
     top: 3pc;
 }
-
+.search {
+      background-color: #496D69;
+}
 
 
 #search {
@@ -125,6 +135,8 @@ margin-top: 41px;
     margin-top: 200px;
     font-size: 28px;
     font-family: serif;
+    position: relative;
+    margin-top: 110px;
 }
 .listing_info>li
 .dave1 {
@@ -137,8 +149,17 @@ margin-top: 41px;
   background-color: #496D69;
   margin-top: 22px;
 }
+.post_by{
+  float:right;
+}
 
-
+#facebook {
+  float: right;
+width: 34px;
+margin-top: 7px;
+margin-left: 0px;
+margin-right: 9px;
+}
 #dave_1 {
     max-width: 300px;
     margin: auto;
@@ -147,6 +168,7 @@ margin-top: 41px;
     background: black;
     margin-top: 30px;
     border-radius: 92%;
+    margin-left: 210px;
 }
 
 #main_listing_photo {
@@ -200,10 +222,13 @@ margin-top: 124px;
 }
 
 #one_homes {
-  float:right;
   max-width: 248px;
-  margin: auto;
-  width: 248px;
+      margin: auto;
+      width: 248px;
+      left: 40%;
+      float: left;
+      margin-top: 24px;
+  }
 }
 
 
@@ -305,6 +330,7 @@ ul {
   border-style: double;
 width: 1100px;
 margin: 30px;
+    background-color: #496D69;
 }
 
 .admin_page {
@@ -400,6 +426,7 @@ margin-left: -38px;
       margin-top: 32px;
       border-style:double;
       width: 1000px;
+      background-color: #496D69;
 }
 
 .review_description{

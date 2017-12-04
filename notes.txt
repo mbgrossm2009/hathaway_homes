@@ -9,22 +9,22 @@ just MA in maps...done
 move more info down...done
 
 
-after advanced search.. back button to advanced search
+after advanced search.. back button to advanced search...done
 
-kill about dave
+kill about dave..done
 
 fix edit review page...done
 
-logos on everypage
+logos on everypage...done
 
 
-border double and center contact form
+border double and center contact form...done
 
 
 homepage: dave hathaway  cell number  one worcester homes... to the right of dave pic
 
 
-add facebook(personal) and linkedin links
+add facebook(personal) and linkedin links...done
 
 move logout down
 https://www.centralmahomesnow.com
@@ -32,6 +32,3 @@ https://www.centralmahomesnow.com
 
 pull homes from other sites
 https://docs.simplyrets.com/api/index.html
-
-
-accpunt settings  public posts 
