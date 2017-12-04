@@ -32,3 +32,6 @@ https://www.centralmahomesnow.com
 
 pull homes from other sites
 https://docs.simplyrets.com/api/index.html
+
+
+accpunt settings  public posts 
