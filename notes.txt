@@ -1,7 +1,3 @@
-add one worcester homes picture (bottom right of every page)
-
-
-fix search bar
 
 
 just MA in maps...done
@@ -21,9 +17,6 @@ logos on everypage...done
 border double and center contact form...done
 
 
-homepage: dave hathaway  cell number  one worcester homes... to the right of dave pic
-
-
 add facebook(personal) and linkedin links...done
 
 move logout down
@@ -32,3 +25,11 @@ https://www.centralmahomesnow.com
 
 pull homes from other sites
 https://docs.simplyrets.com/api/index.html
+
+
+
+fix search bar
+
+add one worcester homes picture (bottom right of every page)
+
+homepage: dave hathaway  cell number  one worcester homes... to the right of dave pic
