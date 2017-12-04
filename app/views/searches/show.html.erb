@@ -3,27 +3,25 @@
   <h2> No Results </h2>
 <% else %>
 
-<div class="listingsection container-fluid">
-  <%@search.listings.each do |listing| %>
-    <div class = "col-lg-4 listing-info">
-      <div class = "col-lg-8">
-        <ul class= "col-lg-12">
-        <li>  <div class="col-lg-12 listing_description"> Description: <%= listing.description%></div></li>
-          <li>House Style: <%= listing.house_style  %></li>
-          <li>Street Address: <%= listing.street_address%></li>
-          <li>Town: <%= listing.town%> </li>
-          <li>State: <%= listing.state%></li>
-          <li>Zipcode: <%= listing.zipcode%></li>
-            <% listing.listing_photo.each_with_index do |photo, index| %>
-              <% if index == 0 %>
-                <li><%= image_tag(photo.url, id: "main_listing_photo") %></li>
-              <% end %>
-            <% end %>
-          <li><%= link_to 'More Information', listing %></li>
+  <div class="listingsection container-fluid">
+    <%@search.listings.each do |listing| %>
+      <div class = "col-lg-4 listing-info">
+        <div class = "col-lg-8">
+          <ul class= "col-lg-12">
+              <li>House Style: <%= listing.house_style  %></li>
+              <li>Street Address: <%= listing.street_address%></li>
+              <li>Town: <%= listing.town%> </li>
+              <li>State: <%= listing.state%></li>
+              <li>Zipcode: <%= listing.zipcode%></li>
+                <% listing.listing_photo.each_with_index do |photo, index| %>
+                  <% if index == 0 %>
+                    <li><%= image_tag(photo.url, id: "all_photos") %></li>
+                  <% end %>
+                <% end %>
+              <li><%= link_to 'More Information', listing %></li>
+            </div>
           </ul>
         </div>
-          </div>
-  <% end %>
-
-</div>
+    <% end %>
+  </div>
 <% end %>

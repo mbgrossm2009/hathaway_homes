@@ -1,0 +1,34 @@
+add one worcester homes picture (bottom right of every page)
+
+
+fix search bar
+
+
+just MA in maps...done
+
+move more info down...done
+
+
+after advanced search.. back button to advanced search
+
+kill about dave
+
+fix edit review page...done
+
+logos on everypage
+
+
+border double and center contact form
+
+
+homepage: dave hathaway  cell number  one worcester homes... to the right of dave pic
+
+
+add facebook(personal) and linkedin links
+
+move logout down
+https://www.centralmahomesnow.com
+
+
+pull homes from other sites
+https://docs.simplyrets.com/api/index.html

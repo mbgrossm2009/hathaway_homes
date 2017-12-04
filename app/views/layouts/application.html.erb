@@ -37,7 +37,7 @@
         </ul>
       </div>
     </div>
-    <% if !request.env['PATH_INFO'] == "/listings"  %>
+    <% if request.env['PATH_INFO'] !=  "/listings" %>
 
       <div class="row text-center">
         <br><%=image_tag("logo2.png", alt: "Example Image", id: 'logo')%>
@@ -50,8 +50,6 @@
           <%= flash[:alert] %>
     <% end %>
     <%= yield %>
-  </div>
-</div>
 
 
   </body>

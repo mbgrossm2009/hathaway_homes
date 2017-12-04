@@ -3,8 +3,10 @@
 
 <div class= "new_reviewform">
   <%= form_for @review do |f| %>
-    <%= f.label :description,'Description' %>  <%= f.text_field :description %>
-    <%= f.hidden_field :user_id, value: current_user.id %><
-    <%= f.submit "Submit Changes" %>
+  <ul>
+  <li><%= f.label :description, "Description: " %></li><li> <%= f.text_area(:description, cols: 100, rows: 10, class: 'myclass')%></li>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+  <li><%= f.submit "Submit Changes", id: "submit" %></li>
+  <ul>
   <% end %>
 </div>

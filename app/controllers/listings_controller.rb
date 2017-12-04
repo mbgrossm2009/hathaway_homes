@@ -1,5 +1,4 @@
 class ListingsController < ApplicationController
-  before_action :authenticate_user!
 
   def index
     @listings = Listing.all
@@ -18,7 +17,7 @@ class ListingsController < ApplicationController
     @listing = Listing.new(listing_params)
     if @listing.save
       flash[:alert] = "New Listing Added Successfully"
-      redirect_to new_listing_path
+      redirect_to listings_path
     else
       flash[:alert]= @listing.errors.full_messages
       render :new
