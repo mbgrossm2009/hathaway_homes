@@ -13,7 +13,7 @@ class ListingPhotoUploader < CarrierWave::Uploader::Base
   else
     storage :fog
   end
-end
+
   # else
     # storage :fog
   # end
