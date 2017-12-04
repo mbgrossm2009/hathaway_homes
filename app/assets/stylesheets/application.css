@@ -118,8 +118,6 @@ margin-top: 41px;
         right: -201px;
 }
 
-.row {}
-
 #search_button {
   position: relative;
   height: 40px;
@@ -229,7 +227,6 @@ margin-top: 124px;
       float: left;
       margin-top: 24px;
   }
-}
 
 
 #header {
@@ -373,7 +370,6 @@ label {
 
 
 .review{
-
 width: 10%;
 margin-right: 8%;
 }
