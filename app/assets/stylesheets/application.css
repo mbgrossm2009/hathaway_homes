@@ -151,9 +151,12 @@ margin-top: 41px;
 .post_by{
   float:right;
 }
-
+.dave_info{
+  position: relative;
+margin-top: 31px;
+}
 #facebook {
-  float: right;
+  float: left;
 width: 34px;
 margin-top: 7px;
 margin-left: 0px;
