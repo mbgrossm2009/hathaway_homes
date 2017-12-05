@@ -110,15 +110,6 @@ margin-top: 41px;
       background-color: #496D69;
 
 }
-.searches {
-    border-style: double;
-    background-color: #4D5259;
-    border-width: 10px;
-    width: 616px;
-    position: relative;
-    left: 25%;
-    top: 78px;
-}
 
 
 #search {
@@ -358,8 +349,9 @@ margin: 30px;
     width: 616px;
     position: relative;
     left: 25%;
-    top: 78px;
+    top: 28px;
 }
+
 
 .advanced_search_input {
     margin-top: 25px;
