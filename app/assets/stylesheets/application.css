@@ -73,10 +73,9 @@ margin-top: 6%;
 }
 .simple_search {
     position: absolute;
-    left: 0;
+    left: 96px;
     top: 50%;
     transform: translateY(-50%);
-    right: 134;
     margin: auto;
     width: 450px;
     height: 40px;
@@ -127,7 +126,7 @@ margin-top: 41px;
   color: black;
   width: 100px;
   float: right;
-  left: 454px;
+  left: 726px;
 }
 
 .about_me {
@@ -138,10 +137,7 @@ margin-top: 41px;
     position: relative;
     margin-top: 110px;
 }
-.listing_info>li
-.dave1 {
-    text-align: center;
-}
+
 .listing_info{
   height: auto;
   border-width: 11px;
@@ -256,7 +252,6 @@ margin-top: 124px;
     right: 51px;
 }
 
-.admin {}
 
 a {
     text-decoration: none;
@@ -277,9 +272,6 @@ ul {
     list-style-type: none;
 }
 
-.new_registration_input {
-    /*padding: 3px;*/
-}
 
 .string.required {
     margin-right: 10px;
@@ -415,7 +407,10 @@ margin-left: -38px;
 #user_phone_number,#user_password_confirmation,#listing_street_address,#listing_state,
 #listing_town,#listing_zipcode,#listing_number_of_bathrooms,#listing_number_of_bedrooms,
 #listing_square_footage,#submit,#listing_asking_price,#listing_house_style,#create,#review_description,
-#listing_description, #user_password,#message_button, #message_name, #message_email, #message_phone_number, #message_body {
+#listing_description, #user_password,#message_button, #message_name, #message_email, #message_phone_number,
+#message_body,#search_house_style, #search_street_address,#search_state,#search_town,#search_zipcode,
+#search_number_of_bathrooms,#search_number_of_bedrooms,
+#search_square_footage,#search_min_price,#search_max_price  {
   color: black;
 }
 
@@ -437,11 +432,7 @@ margin-left: -38px;
 .review_description{
   color:white;
 }
-#search_house_style, #search_street_address,#search_state,#search_town,#search_zipcode,
-#search_number_of_bathrooms,#search_number_of_bedrooms,
-#search_square_footage,#search_min_price,#search_max_price {
-  color:black;
-}
+
 .container-fluid {
     padding: 0;
 }
