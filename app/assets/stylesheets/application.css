@@ -142,10 +142,9 @@ text-align:center;
   float:right;
 }
 .dave_info{
-position: relative;
 left: 31%;
-width: auto;
 margin-top: 10px;
+width:auto !important;
 }
 #facebook {
   float: left;
