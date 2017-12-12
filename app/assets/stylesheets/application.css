@@ -72,15 +72,9 @@ left: 29%;
 margin-top: 6%;
 }
 .simple_search {
-    /*position: absolute;
-    left: 96px;
-    top: 50%;
-    transform: translateY(-50%);
-    margin: auto;
-    width: 450px;
-    height: 40px;
-    text-align: center;
-    color: black;*/
+    position: absolute;
+margin-top: 100px;
+
 }
 
 .listing-info {
