@@ -152,14 +152,15 @@ margin-left: 0px;
 margin-right: 9px;
 }
 #dave_1 {
-    max-width: 300px;
-    margin: auto;
-    border: 10px double white;
-    padding: 4px;
-    background: black;
-    margin-top: 30px;
-    border-radius: 92%;
-    margin-left: 210px;
+  max-width: 300px;
+  margin: auto;
+  border: 10px double white;
+  padding: 4px;
+  background: black;
+  border-radius: 92%;
+  margin-left: 263px;
+  position: relative;
+  top: -32px;
 }
 
 #main_listing_photo {
