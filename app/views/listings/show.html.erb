@@ -16,7 +16,7 @@
     <div class = "pics container-fluid">
       <% @listing.listing_photo.each do |photo| %>
         <div class = "col-lg-2 col-sm-3">
-          <li><%= image_tag(photo.url, id: 'listing_photos')%></li>
+            <li><%= image_tag(photo.url, id: 'listing_photos')%></li>
         </div>
       <% end %>
     </div>
