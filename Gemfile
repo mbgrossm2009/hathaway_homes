@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'image_zoomer'
 gem 'devise'
 gem "simple_form"
+gem 'tunemygc'
 gem "launchy"
 gem 'sendgrid-ruby'
 gem 'jquery-rails'
