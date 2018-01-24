@@ -1,7 +1,7 @@
 
 
 <div class="text-center"><h1> Reviews of HathawayHomes-MA </h1></div>
-<div class = "text-center"><%= link_to 'Write a Personal Review about Hathawayhomes-MA here', new_review_path%></div>
+<div class = "text-center"><%= link_to 'Write a Personal Review about Hathawayhomes-MA here', new_review_path, id: "new_review",remote: true%></div>
   <% @reviews.each do |review| %>
   <div class = "reviews container-fluid">
     <ul>

@@ -11,6 +11,10 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
+    respond_to do |format|
+      format.html {redirect_to reviews_path}
+      format.js
+  end
     if @review.save
       flash[:alert] = "Thanks for your review!"
       redirect_to reviews_path
