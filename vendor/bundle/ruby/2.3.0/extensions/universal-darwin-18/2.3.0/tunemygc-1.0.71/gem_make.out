@@ -1,0 +1,21 @@
+current directory: /Users/grossmanmatt/Desktop/hathaway-homes/hathaway_homes/vendor/bundle/ruby/2.3.0/gems/tunemygc-1.0.71/ext/tunemygc
+/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby -r ./siteconf20181022-17231-46u299.rb extconf.rb
+checking for RUBY_INTERNAL_EVENT_GC_END_SWEEP... yes
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /Users/grossmanmatt/Desktop/hathaway-homes/hathaway_homes/vendor/bundle/ruby/2.3.0/extensions/universal-darwin-18/2.3.0/tunemygc-1.0.71/mkmf.log
+
+current directory: /Users/grossmanmatt/Desktop/hathaway-homes/hathaway_homes/vendor/bundle/ruby/2.3.0/gems/tunemygc-1.0.71/ext/tunemygc
+make "DESTDIR=" clean
+
+current directory: /Users/grossmanmatt/Desktop/hathaway-homes/hathaway_homes/vendor/bundle/ruby/2.3.0/gems/tunemygc-1.0.71/ext/tunemygc
+make "DESTDIR="
+compiling getRSS.c
+compiling tunemygc_ext.c
+linking shared-object tunemygc/tunemygc_ext.bundle
+
+current directory: /Users/grossmanmatt/Desktop/hathaway-homes/hathaway_homes/vendor/bundle/ruby/2.3.0/gems/tunemygc-1.0.71/ext/tunemygc
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 tunemygc_ext.bundle ./.gem.20181022-17231-1yzusvt/tunemygc

@@ -1,6 +1,7 @@
 class ListingsController < ApplicationController
 
   def index
+    @zpids = Zpid.all
     @listings = Listing.all
     if params[:search]
       @listings = Listing.search(params[:search]).order("created_at DESC")
@@ -47,6 +48,8 @@ class ListingsController < ApplicationController
     else
       render 'edit'
     end
+
+
   end
 private
 

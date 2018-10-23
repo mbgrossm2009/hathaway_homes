@@ -12,6 +12,7 @@ class CreateListing < ActiveRecord::Migration[5.1]
       t.string :town
       t.integer :user_id
       t.text :description
+      t.integer :zpid_id
 
 
       t.timestamps

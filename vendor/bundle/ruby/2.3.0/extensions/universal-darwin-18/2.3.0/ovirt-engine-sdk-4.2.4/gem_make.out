@@ -1,0 +1,30 @@
+current directory: /Users/grossmanmatt/Desktop/hathaway-homes/hathaway_homes/vendor/bundle/ruby/2.3.0/gems/ovirt-engine-sdk-4.2.4/ext/ovirtsdk4c
+/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby -r ./siteconf20181022-17231-ygt53g.rb extconf.rb
+checking for xml2-config... yes
+checking for curl-config... yes
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /Users/grossmanmatt/Desktop/hathaway-homes/hathaway_homes/vendor/bundle/ruby/2.3.0/extensions/universal-darwin-18/2.3.0/ovirt-engine-sdk-4.2.4/mkmf.log
+
+current directory: /Users/grossmanmatt/Desktop/hathaway-homes/hathaway_homes/vendor/bundle/ruby/2.3.0/gems/ovirt-engine-sdk-4.2.4/ext/ovirtsdk4c
+make "DESTDIR=" clean
+
+current directory: /Users/grossmanmatt/Desktop/hathaway-homes/hathaway_homes/vendor/bundle/ruby/2.3.0/gems/ovirt-engine-sdk-4.2.4/ext/ovirtsdk4c
+make "DESTDIR="
+compiling ov_error.c
+compiling ov_http_client.c
+compiling ov_http_request.c
+compiling ov_http_response.c
+compiling ov_http_transfer.c
+compiling ov_module.c
+compiling ov_string.c
+compiling ov_xml_reader.c
+compiling ov_xml_writer.c
+compiling ovirtsdk4c.c
+linking shared-object ovirtsdk4c.bundle
+
+current directory: /Users/grossmanmatt/Desktop/hathaway-homes/hathaway_homes/vendor/bundle/ruby/2.3.0/gems/ovirt-engine-sdk-4.2.4/ext/ovirtsdk4c
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 ovirtsdk4c.bundle ./.gem.20181022-17231-cobbez
