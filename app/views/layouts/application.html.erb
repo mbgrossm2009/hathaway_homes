@@ -9,23 +9,20 @@
 </head>
 
   <body>
-
         <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
+            <div class="container">
+              <div class ="row">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
+            <div class="col-md-8 navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
-
                 </button>
-                <a class="navbar-brand" href="#">Space Force</a>
             </div>
-
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="#"> <span class="sr-only">(current)</span></a></li>
+                  <!-- <li class="active"><a href="#"> <span class="sr-only">(current)</span></a></li> -->
                   <li><%= link_to "HomePage", listings_path %></li>
 
                   <li><%= link_to "Contact HathawayHomes", new_message_path %></li>
@@ -43,27 +40,35 @@
                           <li><%= link_to('Sign Out', destroy_user_session_path, :method => :delete) %></li>
                         </ul>
                     </li>
-                  </ul>
 
-                  <ul class="nav navbar-nav navbar-right">
 
-                       <%= form_tag(listings_path, :method => "get", id: "search_form") do %>
+                  <div class="col-md-4 nav navbar-nav navbar-right">
+                  <li><%=image_tag("logo2.png", alt: "Example Image", id: 'nav_logo', class: "img-responsive")%></a></li>
+                  <ul>
+                  </div>
+                </div>
+
+
+                  <!-- <ul class="nav navbar-nav navbar-right"> -->
+
+                    <!-- <li>   <%= form_tag(listings_path, :method => "get", id: "search_form") do %>
                         <%= text_field_tag :search, params[:search], placeholder: "Please enter a House Style, Address, State, or Town" %>
                           <%= submit_tag "Search", :name => nil, id: 'search_button' %>
-                    </li>
-                      <% end %>
-                      <ul>
+                    </li> -->
 
+
+                      <!-- <% end %>
+                      <ul> -->
 
             </div>
           </div>
-
+      </div>
         </nav>
 
     <% if request.env['PATH_INFO'] ==  "/" || request.env['PATH_INFO'] ==  "/listings"  %>
       <% else %>
       <div class="row text-center">
-        <br><%=image_tag("logo2.png", alt: "Example Image", id: 'logo')%>
+        <%=image_tag("logo2.png", alt: "Example Image", id: 'logo')%>
       </div>
     <% end %>
 
@@ -97,28 +102,23 @@
         <!-- Social buttons -->
         <div class ="row">
 
+
+
+
+
         <ul class="list-unstyled list-inline text-center">
           <li class="list-inline-item col-md-2">
               <%=image_tag("one_worcester_homes.jpg", alt: "Example Image", id: 'one_homes', class: "img-responsive")%>
           </li>
           <li class="list-inline-item">
-            <a class="btn-floating btn-fb mx-1" href="https://www.facebook.com/david.hathaway.944">
-              <i class="fa fa-facebook"> </i>
-              <button type="button" class="btn btn-fb">
-                <i class="fa fa-facebook pr-1"></i>
+              <a href="https://www.facebook.com/david.hathaway.944">  <%=image_tag("facebook.png", alt: "Example Image", id: 'social_media', class: "img-responsive")%></a>
+            </li>
+            <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/david-hathaway-23649084/">  <%=image_tag("linkedin.png", alt: "Example Image", id: 'social_media', class: "img-responsive")%></a>
+              </li>
 
-                <span>Facebook</span>
-              </button>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a class="btn-floating btn-fb mx-1" href="https://www.linkedin.com/in/david-hathaway-23649084/">
-              <i class="fa fa-linkedin"> </i>
-              <button type="button" class="btn btn-fb">
-                <i class="fa fa-linkedin pr-1"></i>
 
-                <span>Linkedin</span>
-              </button>
+
             </a>
           </li>
           <li class="list-inline-item">
@@ -127,19 +127,10 @@
             </a>
           </li>
         </ul>
-        <!-- Social buttons -->
-</div>
-      </div>
-      <!-- Footer Elements -->
 
-      <!-- Copyright -->
-      <div class="footer-copyright text-center py-3">© 2018 Copyright:
-        <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MDBootstrap.com</a>
       </div>
-      <!-- Copyright -->
-
+      </div>
     </footer>
-    <!-- Footer -->
-    <!-- Footer -->
+
   </body>
 </html>

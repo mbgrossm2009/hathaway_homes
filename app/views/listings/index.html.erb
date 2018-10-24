@@ -1,15 +1,15 @@
     <main role="main">
       <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="container-fluid">
         <div class="jumbotron">
           <h1 id =  "welcome_title" class = "text-center"> Welcome to HathawayHomes-MA </h1>
           <p><a class="btn btn-primary btn-lg center-block" href="https://www.facebook.com/1WorcesterHomes/" role="button" id="learn_more">Learn more &raquo;</a></p>
         </div>
-      </div>
 
-      <div class="container">
+
+      <div class="homepage_middle container">
         <!-- Example row of columns -->
         <div class="row">
+
           <div class="col-md-8">
             <h2>My Promise to you</h2>
             <p>Whether you are thinking about buying or selling, you are going to want to choose a Realtor who will work diligently in your best interest.
@@ -17,14 +17,14 @@
           </div>
           <div class="col-md-4">
               <h2>Heading</h2>
-              <p><%=image_tag("dave2.JPG", alt: "Example Image", id: 'dave_1', class: "img-responsive")%></p>
+              <%=image_tag("dave2.JPG", alt: "Example Image", id: 'dave_1', class: "img-responsive")%>
           </div>
         </div>
-        <hr>
+
+
 
       </div> <!-- /container -->
-
+<div class = "homepage_bottom">
 <%= render "/zpids/zillow_listings" %>
+</div>
     </main>
-
-<br><br>

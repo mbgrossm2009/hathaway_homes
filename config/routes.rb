@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 resources :zpids
 resources :homepage
 resources :listings
+
+
  resources :reviews do
   member do
     post 'upvote'
