@@ -344,7 +344,7 @@ img {
   vertical-align: middle;
 }
 
-.img-responsive {
+.img-fluid {
   display: block;
   height: auto;
   max-width: 100%;

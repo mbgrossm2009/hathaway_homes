@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181023190204) do
+ActiveRecord::Schema.define(version: 20181102012203) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20181023190204) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "listings", force: :cascade do |t|
+  create_table "mylistings", force: :cascade do |t|
     t.string "house_style"
     t.string "street_address"
     t.string "state"
@@ -34,10 +34,9 @@ ActiveRecord::Schema.define(version: 20181023190204) do
     t.string "town"
     t.integer "user_id"
     t.text "description"
-    t.integer "zpid_id"
+    t.string "listing_photo", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "listing_photo", default: [], array: true
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -69,6 +68,8 @@ ActiveRecord::Schema.define(version: 20181023190204) do
     t.string "phone_number", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.integer "review_id"
+    t.integer "mylisting_id"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -96,5 +97,5 @@ ActiveRecord::Schema.define(version: 20181023190204) do
     t.integer "listing_id"
   end
 
-  add_foreign_key "listings", "users"
+  add_foreign_key "mylistings", "users"
 end

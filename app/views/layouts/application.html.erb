@@ -1,52 +1,118 @@
-<!DOCTYPE html>
 <html>
   <head>
     <title>HathawayHomes</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-</head>
-
+  </head>
   <body>
-        <nav class="navbar navbar-inverse">
-            <div class="container">
-              <div class ="row">
-            <!-- Brand and toggle get grouped for better mobile display -->
+      <nav class="navbar navbar-inverse">
+        <div class="container">
+          <div class ="row">
             <div class="col-md-8 navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                </button>
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              </button>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                  <!-- <li class="active"><a href="#"> <span class="sr-only">(current)</span></a></li> -->
-                  <li><%= link_to "HomePage", listings_path %></li>
+              <ul class="nav navbar-nav">
+                <li><%= link_to "HomePage", listings_path %></li>
+                <li><%= link_to "Reviews", reviews_path %> </li>
+                <li><%= link_to "My Personal Listings", mylistings_path %></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
 
-                  <li><%= link_to "Contact HathawayHomes", new_message_path %></li>
-                  <li><%= link_to "Reviews", reviews_path %> </a></li>
                     <%if user_signed_in? && current_user.admin? %>
-                      <li><%= link_to "Admin Page", users_path %></li>
+                    <li><%= link_to "Admin Page", users_path %></li>
+                    <li><%= link_to "Add a Personal Listing", new_mylisting_path %></li>
                     <%end%>
-                    <li><%= link_to "Advanced Search", new_search_path %></li>
+                  </ul>
+                </li>
 
+
+
+
+
+
+
+
+                    <!-- <li><%= link_to "Advanced Search", new_search_path %></li> -->
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Account <span class="caret"></span></a>
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Account <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                           <li><%= link_to 'Sign In', new_user_session_path %></li>
                           <li><%= link_to 'Sign Up', new_user_registration_path %></li>
                           <li><%= link_to('Sign Out', destroy_user_session_path, :method => :delete) %></li>
                         </ul>
                     </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Additional Resources<span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li><%= link_to 'Zillow', "http://www.zillow.com/", :target => "_blank"%></li>
+                        <li><%= link_to 'Realtor.com', "https://www.realtor.com/", :target => "_blank"%></li>
+                        <li><%= link_to "Multiple Listing Service", "http://www.mls.com/", :target => "_blank"%></li>
+                        <li><%= link_to 'Trulia', "https://www.trulia.com/", :target => "_blank"%></li>
+                        <li><%= link_to 'Redfin', "https://www.redfin.com/", :target => "_blank"%></li>
+                      </ul>
+                      <li class ="col-md-3"><%=image_tag("logo2.png", alt: "Example Image", id: 'nav_logo', class: "img-fluid")%></a></li>
+                    </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
 
 
-                  <div class="col-md-4 nav navbar-nav navbar-right">
-                  <li><%=image_tag("logo2.png", alt: "Example Image", id: 'nav_logo', class: "img-responsive")%></a></li>
-                  <ul>
-                  </div>
-                </div>
+
+
+<!--
+    <% if request.env['PATH_INFO'] ==  "/" || request.env['PATH_INFO'] ==  "/listings"  %>
+      <% else %>
+       <div class="row text-center">
+        <%=image_tag("logo2.png", alt: "Example Image", id: 'logo')%>
+      </div> -->
+    <!-- <% end %> -->
+    <% if flash.any? %>
+      <div class="flash">
+        <div class="container-fluid">
+          <%= flash[:alert] %>
+    <% end %>
+    <%= yield %>
+
+
+
+
+
+
+    <footer class="page-footer font-small special-color-dark pt-4">
+        <div class="container">
+          <div class ="row">
+            <ul class="list-unstyled list-inline text-center">
+              <li class="list-inline-item col-md-2">
+                <%=image_tag("one_worcester_homes.jpg", alt: "Example Image", id: 'one_homes', class: "img-fluid")%>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.facebook.com/david.hathaway.944">  <%=image_tag("facebook.png", alt: "Example Image", id: 'social_media', class: "img-fluid")%></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/david-hathaway-23649084/">  <%=image_tag("linkedin.png", alt: "Example Image", id: 'social_media', class: "img-fluid")%></a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn-floating btn-dribbble mx-1">
+                  <i class="fa fa-dribbble"> </i>
+                </a>
+              </li>
+              <li class ="list-inline-item"> <%=render "messages/modal"%></li>
+
+            </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
 
 
                   <!-- <ul class="nav navbar-nav navbar-right"> -->
@@ -60,77 +126,27 @@
                       <!-- <% end %>
                       <ul> -->
 
-            </div>
-          </div>
-      </div>
-        </nav>
-
-    <% if request.env['PATH_INFO'] ==  "/" || request.env['PATH_INFO'] ==  "/listings"  %>
-      <% else %>
-      <div class="row text-center">
-        <%=image_tag("logo2.png", alt: "Example Image", id: 'logo')%>
-      </div>
-    <% end %>
-
-    <% if flash.any? %>
-      <div class="flash">
-        <div class="container-fluid">
-          <%= flash[:alert] %>
-    <% end %>
-    <%= yield %>
-
-  <!-- <div class = "container-fluid">
-    <div class = "col-lg-6 col-sm-6">
-    </div>
-    <ul>
-      <div class = "col-lg-6 col-sm-6 dave_info">
-        <li> Dave Hathaway (978) 375-9401</li>
-        <li>  <a href = "https://www.facebook.com/david.hathaway.944"> </a></li>
-        <li>  <a href = "https://www.linkedin.com/in/david-hathaway-23649084/"> </a></li>
-      </div>
-    </ul>
-  </div> -->
 
 
 
-  <!-- Footer -->
-  <footer class="page-footer font-small special-color-dark pt-4">
-
-      <!-- Footer Elements -->
-      <div class="container">
-
-        <!-- Social buttons -->
-        <div class ="row">
+                      <!-- <div class = "container-fluid">
+                        <div class = "col-lg-6 col-sm-6">
+                        </div>
+                        <ul>
+                          <div class = "col-lg-6 col-sm-6 dave_info">
+                            <li> Dave Hathaway (978) 375-9401</li>
+                            <li>  <a href = "https://www.facebook.com/david.hathaway.944"> </a></li>
+                            <li>  <a href = "https://www.linkedin.com/in/david-hathaway-23649084/"> </a></li>
+                          </div>
+                        </ul>
+                      </div> -->
 
 
 
 
-
-        <ul class="list-unstyled list-inline text-center">
-          <li class="list-inline-item col-md-2">
-              <%=image_tag("one_worcester_homes.jpg", alt: "Example Image", id: 'one_homes', class: "img-responsive")%>
-          </li>
-          <li class="list-inline-item">
-              <a href="https://www.facebook.com/david.hathaway.944">  <%=image_tag("facebook.png", alt: "Example Image", id: 'social_media', class: "img-responsive")%></a>
-            </li>
-            <li class="list-inline-item">
-                <a href="https://www.linkedin.com/in/david-hathaway-23649084/">  <%=image_tag("linkedin.png", alt: "Example Image", id: 'social_media', class: "img-responsive")%></a>
-              </li>
-
-
-
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a class="btn-floating btn-dribbble mx-1">
-              <i class="fa fa-dribbble"> </i>
-            </a>
-          </li>
-        </ul>
-
-      </div>
-      </div>
-    </footer>
-
-  </body>
-</html>
+                    <!-- <div class="col-md-4 nav navbar-nav navbar-right">
+                    <ul>
+                    <li><%=image_tag("logo2.png", alt: "Example Image", id: 'nav_logo', class: "img-fluid")%></a></li>
+                  <li> <%=render "messages/modal"%></li>
+                  </ul>
+                      </div>

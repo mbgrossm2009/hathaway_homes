@@ -1,1 +1,15 @@
-<%= render "form"%>
+
+
+<div class = "container">
+  <div class="row">
+    <div class = "col-lg-2">
+<%= bootstrap_form_for(@review) do |f| %>
+  <div id="review">
+    <h4><%= f.text_area(:description, label: "Write your Review Below:", cols: 50, rows: 4)%></h4>
+  </div>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+   <%= f.submit "Submit Review"%>
+  <% end %>
+</div>
+</div>
+</div>

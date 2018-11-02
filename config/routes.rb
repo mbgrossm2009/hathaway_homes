@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 resources :zpids
 resources :homepage
 resources :listings
+resources :mylistings
 
 
  resources :reviews do
@@ -14,7 +15,6 @@ resources :listings
   end
 end
 resources :searches
-resources :additional_links, only: [:index]
 
 resources :users, only: [:index]
 
@@ -25,5 +25,4 @@ put 'admin/:id' => 'users#make_admin', :as => "make_admin"
 
 
 
-root 'listings#index'
 end

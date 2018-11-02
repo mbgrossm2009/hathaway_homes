@@ -1,11 +1,9 @@
 
 <div class= "listing_info">
   <%= form_for @zpid do |f| %>
-  <ul>
-    <li> <%= f.label :zpid,'Zpid: ' %>  <%= f.text_field :zpid %></li>
-    <li>   <%= f.submit "Create" %> </li>
-  </ul>
-
-
+    <ul>
+      <li> <%= f.label :zpid,'Zpid: ' %>  <%= f.text_field :zpid %></li>
+      <li>   <%= f.submit "Create" %> </li>
+    </ul>
   <% end %>
 </div>

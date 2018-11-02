@@ -10,11 +10,7 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @review = Review.new(review_params)
-    respond_to do |format|
-      format.html {redirect_to reviews_path}
-      format.js
-  end
+    @review= Review.new(review_params)
     if @review.save
       flash[:alert] = "Thanks for your review!"
       redirect_to reviews_path
@@ -23,6 +19,8 @@ class ReviewsController < ApplicationController
       render :new
     end
   end
+
+
 
   def destroy
     @review = Review.find(params[:id])

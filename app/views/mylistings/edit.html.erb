@@ -1,0 +1,25 @@
+
+
+  <div class = "container">
+    <div class="row">
+      <div class = "col-lg-5">
+        <%= bootstrap_form_for @mylisting do |f| %>
+        <ul class = "myListingform">
+          <li><%= f.select :house_style, ['CapeCod', 'Country French', 'Colonial', 'Victorian', 'Tudor', 'Craftsman', 'Cottage', 'Mediterranean', 'Ranch', 'Contemporary', 'Other'], label: "House Style"%></li>
+          <li><%= f.text_field :street_address, label: "Street Address" %></li>
+          <li> <%= f.text_field :state,label: "State"%></li>
+          <li><%= f.text_field :town, label: "Town" %></li>
+          <li><%= f.text_field :zipcode, label: "Zipcode" %></li>
+          <li><%= f.select :number_of_bathrooms,(1..10).inject([0]) { |arr, val| arr << [val,val + 0.5] }.flatten, label: "Number of Bathrooms"  %></li>
+          <li><%= f.select :number_of_bedrooms,[0,1,2,3,4,5,6,7,8,9,10]  %></li>
+          <li><%= f.text_field :square_footage, label: "Square Footage" %></li>
+          <li> <%= f.text_field :asking_price , label: "Asking Price"%></li>
+          <li><%= f.text_area :description, cols: 40, rows: 15, class: 'myclass', label: "Description"%></li>
+          <li><%= f.file_field :listing_photo, multiple: true %></li>
+          <li><%= f.hidden_field :user_id, value: current_user.id %></li>
+          <li id= "submit_button"> <%= f.submit "Create" %></li>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</div>

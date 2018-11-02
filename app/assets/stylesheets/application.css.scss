@@ -12,6 +12,10 @@
 //  *
 //
 //  */
+
+/*
+ *= require rails_bootstrap_forms
+ */
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 html, body {
@@ -19,12 +23,34 @@ html, body {
     background-color: #222222 !important;
 }
 
+.contact-form {
+  color:white;
+}
 form{
   color:black;
+}
+#review{
+  color:white;
+  margin-bottom: 27px;
+}
+
+#modal_img{
+  display:block;
+  margin-left:0%;
+  margin-right:0%;
+  width:60%;
+}
+.modal-body{
+    background-color: #222222;
 }
 .homepage_bottom{
     margin-top: 40px;
         border-top: 6px white solid;
+}
+
+.mylistingform li{
+  color: white;
+  list-style: none;
 }
 
 
@@ -38,7 +64,9 @@ form{
   height: 400px;
   bottom: 20px;
 }
-
+#submit_button{
+  color:black;
+}
 #zillow_image{
       width: 260px;
 }
@@ -48,6 +76,13 @@ form{
   right: -15%;
 }
 
+.nav li {
+ display:inline;
+}
+
+.review_form{
+      width: 50%;
+}
 #learn_more{
   width: 19%;
 }
@@ -61,8 +96,8 @@ form{
 }
 
 #nav_logo{
-  width: 24%;
-
+  width: 87%;
+  padding-right: 17%;
 
 }
 

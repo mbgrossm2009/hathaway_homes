@@ -1,30 +1,22 @@
-    <main role="main">
-      <!-- Main jumbotron for a primary marketing message or call to action -->
-        <div class="jumbotron">
-          <h1 id =  "welcome_title" class = "text-center"> Welcome to HathawayHomes-MA </h1>
-          <p><a class="btn btn-primary btn-lg center-block" href="https://www.facebook.com/1WorcesterHomes/" role="button" id="learn_more">Learn more &raquo;</a></p>
-        </div>
-
-
-      <div class="homepage_middle container">
-        <!-- Example row of columns -->
-        <div class="row">
-
-          <div class="col-md-8">
-            <h2>My Promise to you</h2>
-            <p>Whether you are thinking about buying or selling, you are going to want to choose a Realtor who will work diligently in your best interest.
-            My mission is to do exactly that. Please reach out to me today for a free comparitive market analysis or if you are looking to buy a home I am ready to help </p>
-          </div>
-          <div class="col-md-4">
-              <h2>Heading</h2>
-              <%=image_tag("dave2.JPG", alt: "Example Image", id: 'dave_1', class: "img-responsive")%>
-          </div>
-        </div>
-
-
-
-      </div> <!-- /container -->
-<div class = "homepage_bottom">
-<%= render "/zpids/zillow_listings" %>
-</div>
-    </main>
+<main role="main">
+  <div class="jumbotron">
+    <h1 id = "welcome_title" class = "text-center"> Welcome to HathawayHomes-MA </h1>
+    <p><a class="btn btn-primary btn-lg center-block" href="https://www.facebook.com/1WorcesterHomes/" role="button" id="learn_more">Learn more &raquo;</a></p>
+  </div>
+  <div class="homepage_middle container">
+    <div class="row">
+      <div class="col-md-8">
+        <h2>My Promise to you</h2>
+        <p>Whether you are thinking about buying or selling, you are going to want to choose a Realtor who will work diligently in your best interest.
+        My mission is to do exactly that. Please reach out to me today for a free comparitive market analysis or if you are looking to buy a home I am ready to help </p>
+      </div>
+      <div class="col-md-4">
+          <h2>Heading</h2>
+          <%=image_tag("dave2.JPG", alt: "Example Image", id: 'dave_1', class: "img-fluid")%>
+      </div>
+    </div>
+  </div>
+  <div class = "homepage_bottom">
+  <%= render "/zpids/zillow_listings" %>
+  </div>
+</main>

@@ -6,7 +6,7 @@ class User < ApplicationRecord
   validates :phone_number, presence: true
   validates :email, presence: true
 
-  has_many :listings
+  has_many :mylistings
   has_many :reviews
   has_many :votes
 

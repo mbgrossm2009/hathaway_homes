@@ -1,6 +1,6 @@
 class Search < ApplicationRecord
   def listings
-    @listings = find_listings
+    @mylistings = find_listings
   end
 
   private

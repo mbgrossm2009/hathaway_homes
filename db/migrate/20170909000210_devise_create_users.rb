@@ -7,6 +7,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
       t.string :phone_number, null: false
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
+      t.integer :review_id
+      t.integer :mylisting_id
 
       ## Recoverable
       t.string   :reset_password_token

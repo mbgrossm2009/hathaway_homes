@@ -37,9 +37,12 @@ gem 'sendgrid-ruby'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'pg', '~> 0.18.4'
-gem "carrierwave", :github => "carrierwaveuploader/carrierwave"
+gem 'carrierwave', '~> 1.0'
 gem "mini_magick"
 gem 'rails_12factor', group: :production
+gem "bootstrap_form",
+    git: "https://github.com/bootstrap-ruby/rails-bootstrap-forms.git",
+    branch: "master"
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
@@ -58,6 +61,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'rspec-rails'
   gem 'pry-rails'
+  gem 'railties', '~> 5.0', '>= 5.0.0.1'
   gem 'dotenv-rails'
 
 end
