@@ -19,8 +19,16 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 html, body {
-    color: white !important;
+    color: #efefef !important;
     background-color: #222222 !important;
+    position:relative;
+}
+
+body button{
+  position: absolute;
+top: 10px;
+right: 0;
+padding:0;
 }
 
 .contact-form {
@@ -40,14 +48,31 @@ form{
   margin-right:0%;
   width:60%;
 }
+
+.registration_form{
+  width: 50%
+}
 .modal-body{
     background-color: #222222;
 }
 .homepage_bottom{
     margin-top: 40px;
         border-top: 6px white solid;
+        height:100%;
+        padding-bottom:0;
 }
 
+
+
+.footer {
+
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  width: 100%;
+  height:auto;
+  background-color: #efefef;
+}
 .mylistingform li{
   color: white;
   list-style: none;
@@ -56,6 +81,8 @@ form{
 
 .zillow_listings {
   list-style: none;
+margin-top: 3rem;
+
 }
 
 .jumbotron {
@@ -89,10 +116,12 @@ form{
 
 #one_homes{
   width:150px;
+  height: 70px;
 }
 
 #social_media{
-      width: 60px;
+width: auto;
+height: 70px;
 }
 
 #nav_logo{
@@ -101,10 +130,24 @@ form{
 
 }
 
+#dave_info{
+  color:black;
+}
+
+.control-label{
+  color:white;
+
+}
 .navbar{
   clear: both;
 }
+.signup{
+      margin-bottom: 5%;
+}
 
+form li {
+  color: white;
+}
 
 
 //

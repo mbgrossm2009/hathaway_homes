@@ -33,3 +33,33 @@ fix search bar
 add one worcester homes picture (bottom right of every page)
 
 homepage: dave hathaway  cell number  one worcester homes... to the right of dave pic
+
+
+
+
+                  <ul class="nav navbar-nav navbar-right"> -->
+
+                     <li>   <%= form_tag(listings_path, :method => "get", id: "search_form") do %>
+                        <%= text_field_tag :search, params[:search], placeholder: "Please enter a House Style, Address, State, or Town" %>
+                          <%= submit_tag "Search", :name => nil, id: 'search_button' %>
+                    </li>
+
+
+                       <% end %>
+                      <ul>
+
+
+
+
+
+                      <% if request.env['PATH_INFO'] ==  "/" || request.env['PATH_INFO'] ==  "/listings"  %>
+                        <% else %>
+                         <div class="row text-center">
+                          <%=image_tag("logo2.png", alt: "Example Image", id: 'logo')%>
+                        </div>
+                       <% end %>
+                      <% if flash.any? %>
+                        <div class="flash">
+                          <div class="container-fluid">
+                            <%= flash[:alert] %>
+                      <% end %>

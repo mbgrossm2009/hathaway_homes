@@ -8,8 +8,8 @@
   <body>
       <nav class="navbar navbar-inverse">
         <div class="container">
-          <div class ="row">
-            <div class="col-md-8 navbar-header">
+          <div class = "row">
+            <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
@@ -30,15 +30,6 @@
                     <%end%>
                   </ul>
                 </li>
-
-
-
-
-
-
-
-
-                    <!-- <li><%= link_to "Advanced Search", new_search_path %></li> -->
                     <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Account <span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -55,42 +46,35 @@
                         <li><%= link_to "Multiple Listing Service", "http://www.mls.com/", :target => "_blank"%></li>
                         <li><%= link_to 'Trulia', "https://www.trulia.com/", :target => "_blank"%></li>
                         <li><%= link_to 'Redfin', "https://www.redfin.com/", :target => "_blank"%></li>
+                        </ul>
+                        </li>
                       </ul>
-                      <li class ="col-md-3"><%=image_tag("logo2.png", alt: "Example Image", id: 'nav_logo', class: "img-fluid")%></a></li>
-                    </li>
-                </ul>
-            </div>
+              </div>
           </div>
-        </div>
+          </div>
       </nav>
 
 
 
 
-<!--
-    <% if request.env['PATH_INFO'] ==  "/" || request.env['PATH_INFO'] ==  "/listings"  %>
-      <% else %>
-       <div class="row text-center">
-        <%=image_tag("logo2.png", alt: "Example Image", id: 'logo')%>
-      </div> -->
-    <!-- <% end %> -->
-    <% if flash.any? %>
-      <div class="flash">
-        <div class="container-fluid">
-          <%= flash[:alert] %>
-    <% end %>
-    <%= yield %>
+
+      <% if flash.any? %>
+        <div class="flash">
+          <div class="container-fluid">
+            <%= flash[:alert] %>
+      <% end %>
+      <%= yield %>
 
 
 
 
 
 
-    <footer class="page-footer font-small special-color-dark pt-4">
-        <div class="container">
-          <div class ="row">
+
+    <footer class="footer font-small special-color-dark pt-4">
+      <div class="container">
             <ul class="list-unstyled list-inline text-center">
-              <li class="list-inline-item col-md-2">
+              <li class="list-inline-item col-md-10">
                 <%=image_tag("one_worcester_homes.jpg", alt: "Example Image", id: 'one_homes', class: "img-fluid")%>
               </li>
               <li class="list-inline-item">
@@ -100,32 +84,21 @@
                 <a href="https://www.linkedin.com/in/david-hathaway-23649084/">  <%=image_tag("linkedin.png", alt: "Example Image", id: 'social_media', class: "img-fluid")%></a>
               </li>
               <li class="list-inline-item">
+                  <%= render "/messages/modal" %>
+              </li>
+
+
+              <li class="list-inline-item">
                 <a class="btn-floating btn-dribbble mx-1">
                   <i class="fa fa-dribbble"> </i>
                 </a>
               </li>
-              <li class ="list-inline-item"> <%=render "messages/modal"%></li>
-
             </ul>
+
         </div>
-      </div>
-    </footer>
-  </body>
+      </body>
+
 </html>
-
-
-
-                  <!-- <ul class="nav navbar-nav navbar-right"> -->
-
-                    <!-- <li>   <%= form_tag(listings_path, :method => "get", id: "search_form") do %>
-                        <%= text_field_tag :search, params[:search], placeholder: "Please enter a House Style, Address, State, or Town" %>
-                          <%= submit_tag "Search", :name => nil, id: 'search_button' %>
-                    </li> -->
-
-
-                      <!-- <% end %>
-                      <ul> -->
-
 
 
 
@@ -134,19 +107,9 @@
                         </div>
                         <ul>
                           <div class = "col-lg-6 col-sm-6 dave_info">
-                            <li> Dave Hathaway (978) 375-9401</li>
+
                             <li>  <a href = "https://www.facebook.com/david.hathaway.944"> </a></li>
                             <li>  <a href = "https://www.linkedin.com/in/david-hathaway-23649084/"> </a></li>
                           </div>
                         </ul>
                       </div> -->
-
-
-
-
-                    <!-- <div class="col-md-4 nav navbar-nav navbar-right">
-                    <ul>
-                    <li><%=image_tag("logo2.png", alt: "Example Image", id: 'nav_logo', class: "img-fluid")%></a></li>
-                  <li> <%=render "messages/modal"%></li>
-                  </ul>
-                      </div>

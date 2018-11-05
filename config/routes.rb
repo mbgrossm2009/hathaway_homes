@@ -23,6 +23,6 @@ post 'contact-me', to: 'messages#create', as: 'create_message'
 
 put 'admin/:id' => 'users#make_admin', :as => "make_admin"
 
-
+root 'listings#index'
 
 end

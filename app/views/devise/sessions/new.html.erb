@@ -1,32 +1,4 @@
-<!-- <div class ="new_form">
-<h2 class="log_in_title">Log in</h2>
 
-<div class = "log_in">
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in", class: 'btn' %>
-  </div>
-<% end %>
-
-</div>
-</div> -->
 
 
 <!doctype html>
@@ -47,21 +19,41 @@
     <link href="signin.css" rel="stylesheet">
   </head>
 
+
+
+
   <body class="text-center">
-    <form class="form-signin">
-      <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-      <label for="inputEmail" class="sr-only">Email address</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-      <label for="inputPassword" class="sr-only">Password</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
-      </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
-    </form>
+    <div class="container">
+      <h2 class="form-signin-heading">Please sign in</h2>
+      <div class="col-md-4 col-md-offset-4">
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "form-signin"}) do |f| %>
+
+    <div class="form-group">
+        <%= f.label :email, class: "col-sm-4 control-label" %>
+        <div class="col-sm-8">
+          <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'Email Address' %>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <%= f.label :password, class: "col-sm-4 control-label" %>
+        <div class="col-sm-8">
+          <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: 'Password' %>
+        </div>
+    </div>
+
+
+        <div class="form-group">
+            <div class="col-sm-8">
+              <%= f.submit "Sign up", class: "btn btn-primary" %>
+            </div>
+        </div>
+
+
+    <% end %>
+  </div>
+  </div>
   </body>
 </html>

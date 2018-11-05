@@ -1,7 +1,10 @@
-<main role="main">
-  <div class="jumbotron">
+
+
+    <div class="jumbotron">
     <h1 id = "welcome_title" class = "text-center"> Welcome to HathawayHomes-MA </h1>
-    <p><a class="btn btn-primary btn-lg center-block" href="https://www.facebook.com/1WorcesterHomes/" role="button" id="learn_more">Learn more &raquo;</a></p>
+    <p class = "center-block"><%= render "/messages/modal" %></p>
+
+    <!-- <p><a class="btn btn-primary btn-lg center-block" href="https://www.facebook.com/1WorcesterHomes/" role="button" id="learn_more">Learn more &raquo;</a></p> -->
   </div>
   <div class="homepage_middle container">
     <div class="row">
@@ -16,7 +19,8 @@
       </div>
     </div>
   </div>
+
+
   <div class = "homepage_bottom">
   <%= render "/zpids/zillow_listings" %>
-  </div>
-</main>
+</div>
