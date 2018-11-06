@@ -22,6 +22,7 @@ html, body {
     color: #efefef !important;
     background-color: #222222 !important;
     position:relative;
+    clear:both;
 }
 
 ul{
@@ -51,6 +52,11 @@ form{
   margin-left:0%;
   margin-right:0%;
   width:60%;
+}
+
+#review_description{
+margin: 0px -572px 0px 0px;
+
 }
 
 .registration_form{
@@ -132,6 +138,15 @@ width: auto;
   width: 87%;
   padding-right: 17%;
 
+}
+
+.review_list{
+padding: 26px;
+margin-bottom:10px;
+background-color: #efefef;
+color: black;
+border-style: double;
+border-width: 2rem;
 }
 
 #dave_info{
