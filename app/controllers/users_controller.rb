@@ -1,9 +1,15 @@
 
 class UsersController < ApplicationController
   before_action :authenticate_user!
+  before_action :load_zpid
 
   def index
     @users = User.all
+  end
+
+
+  def load_zpid
+    @zpid = Zpid.new
   end
 
   def make_admin
