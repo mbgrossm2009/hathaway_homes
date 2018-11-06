@@ -11,7 +11,6 @@
               <li>State:<%= listing.state%></li>
               <li>Zipcode:<%= listing.zipcode%></li>
               <% listing.mylisting_photo.each_with_index do |photo, index| %>
-
                 <% if index == 0 %>
                   <div><li><%= image_tag(photo.url, id: "all_photos") %><li></div>
                 <% end %>
