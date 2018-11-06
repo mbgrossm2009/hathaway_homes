@@ -3,6 +3,7 @@
 <div class = "container">
   <div class = "row">
     <%@zpids.each do |zpid|%>
+
       <%property = Rubillow::HomeValuation.zestimate({ :zpid => zpid.zpid})%>
       <%if property.success?%>
       <ul class="col-lg-3 zillow_listings">
