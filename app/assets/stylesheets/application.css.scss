@@ -24,6 +24,10 @@ html, body {
     position:relative;
 }
 
+ul{
+  list-style: none;
+}
+
 body button{
   position: absolute;
 top: 10px;
@@ -68,9 +72,9 @@ form{
 
   position: absolute;
   bottom: 0;
-  padding: 1rem;
+  // padding: 1rem;
   width: 100%;
-  height:auto;
+    height: 5rem;
   background-color: #efefef;
 }
 .mylistingform li{
@@ -87,9 +91,9 @@ margin-top: 3rem;
 
 .jumbotron {
   background-image: url(homepage_pic.png);
-  position: relative;
   height: 400px;
   bottom: 20px;
+  width:100%;
 }
 #submit_button{
   color:black;
@@ -116,12 +120,12 @@ margin-top: 3rem;
 
 #one_homes{
   width:150px;
-  height: 70px;
+      height: 5rem;
 }
 
 #social_media{
 width: auto;
-height: 70px;
+    height: 5rem;
 }
 
 #nav_logo{
