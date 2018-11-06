@@ -1,6 +1,4 @@
 
-CarrierWave.configure do |config|
-
 
 if Rails.env.test? or Rails.env.development?
   CarrierWave.configure do |config|
