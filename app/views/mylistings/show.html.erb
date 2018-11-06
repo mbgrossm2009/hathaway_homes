@@ -14,7 +14,7 @@
     <li class = 'listing_description'>Description: <%= @mylisting.description%></li>
   </div>
     <div class = "pics container-fluid">
-      <% @mylisting.listing_photo.each do |photo| %>
+      <% @mylisting.mylisting_photo.each do |photo| %>
         <div class = "col-lg-2 col-sm-3">
             <li><%= image_tag(photo.url, id: 'listing_photos')%></li>
         </div>

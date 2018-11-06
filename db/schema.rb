@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20181102012203) do
     t.string "town"
     t.integer "user_id"
     t.text "description"
-    t.string "listing_photo", default: [], array: true
+    t.string "mylisting_photo", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

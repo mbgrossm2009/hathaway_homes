@@ -1,4 +1,4 @@
-class ListingPhotoUploader < CarrierWave::Uploader::Base
+class MylistingPhotoUploader < CarrierWave::Uploader::Base
 
 
 

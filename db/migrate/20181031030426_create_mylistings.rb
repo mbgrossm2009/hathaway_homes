@@ -12,7 +12,7 @@ class CreateMylistings < ActiveRecord::Migration[5.1]
           t.string :town
           t.integer :user_id
           t.text :description
-          t.string :listing_photo, default: [], array: true
+          t.string :mylisting_photo, default: [], array: true
 
 
 

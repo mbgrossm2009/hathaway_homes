@@ -10,7 +10,7 @@ class MylistingsController < ApplicationController
 
     def create
       @mylisting = Mylisting.new(mylisting_params)
-      if @mylisting.save
+       if @mylisting.save
         flash[:alert] = "New Listing Added Successfully"
         redirect_to mylistings_path
       else
@@ -50,6 +50,6 @@ class MylistingsController < ApplicationController
   private
 
     def mylisting_params
-      params.require(:mylisting).permit(:house_style, :street_address, :state, :zipcode, :number_of_bathrooms, :number_of_bedrooms, :square_footage, :description, :asking_price,{listing_photo: []}, :town,:user_id)
+      params.require(:mylisting).permit(:house_style, :street_address, :state, :zipcode, :number_of_bathrooms, :number_of_bedrooms, :square_footage, :description, :asking_price,{mylisting_photo: []}, :town,:user_id)
     end
   end

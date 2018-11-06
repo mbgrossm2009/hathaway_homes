@@ -15,7 +15,7 @@
           <li><%= f.text_field :square_footage, label: "Square Footage" %></li>
           <li> <%= f.text_field :asking_price , label: "Asking Price"%></li>
           <li><%= f.text_area :description, cols: 40, rows: 15, class: 'myclass', label: "Description"%></li>
-          <li><%= f.file_field :listing_photo, multiple: true %></li>
+          <li><%= f.file_field :mylisting_photo, multiple: true %></li>
           <li><%= f.hidden_field :user_id, value: current_user.id %></li>
           <li id= "submit_button"> <%= f.submit "Create" %></li>
         </ul>
