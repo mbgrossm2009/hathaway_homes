@@ -13,8 +13,8 @@ else
       :aws_secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'],
       :region => ENV['AWS_S3_REGION']
     }
-    config.storage = :fog
+
     config.fog_directory = ENV['AWS_S3_BUCKET_NAME']
-    config.asset_host = "#{ENV['AWS_S3_ASSET_URL']}/#{ENV['AWS_S3_BUCKET_NAME']}"
+    config.storage = :fog
   end
 end
