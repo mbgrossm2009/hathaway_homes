@@ -39,7 +39,7 @@ class MylistingsController < ApplicationController
 
     def update
     @mylisting = Mylisting.find(params[:id])
-      if @mylisting.update_attributes(listing_params) && current_user == @mylisting.user
+      if @mylisting.update_attributes(mylisting_params) && current_user == @mylisting.user
         flash[:alert] = "Listing Successfully Updated"
         redirect_to mylistings_path
       else
