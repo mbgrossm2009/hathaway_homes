@@ -11,7 +11,7 @@ class MylistingPhotoUploader < CarrierWave::Uploader::Base
     if Rails.env.test? || Rails.env.development?
       storage :file
     else
-      storage :fog
+      storage :aws
     end
 
   # Override the directory where uploaded files will be stored.
