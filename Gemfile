@@ -37,7 +37,7 @@ gem 'sendgrid-ruby'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'pg', '~> 0.18.4'
-gem 'carrierwave-aws'
+gem "carrierwave", :github => "carrierwaveuploader/carrierwave"
 gem "mini_magick"
 gem 'rails_12factor', group: :production
 gem "bootstrap_form",
