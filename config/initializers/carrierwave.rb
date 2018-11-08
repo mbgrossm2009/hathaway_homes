@@ -1,23 +1,20 @@
 
 
-if Rails.env.production?
-  CarrierWave.configure do |config|
-    config.storage = :fog
-    config.fog_credentials = {
-      :provider               => 'AWS',                            # required
-      :aws_access_key_id      => ENV['AWS_ACCESS_KEY_ID'],         # required
-      :aws_secret_access_key  => ENV['AWS_SECRET_ACCESS_KEY'],     # required
-    }
-    config.fog_directory  = ENV['S3_BUCKET_PRODUCTION']                 # required
-    config.fog_public     = true                                   # optional, defaults to true
-    config.root = Rails.root.join('tmp')
-    config.cache_dir = 'files'
-    config.permissions = 0777
-    config.fog_attributes = {'Cache-Control'=>'max-age=315576000'}  # optional, defaults to {}
+CarrierWave.configure do |config|
+
+  if Rails.env.development? || Rails.env.test?
+    config.storage = :file
+  else
     config.fog_provider = 'fog/aws'
-  end
-else
-  CarrierWave.configure do |config|
-    config.storage :file
+    config.fog_credentials = {
+      provider: 'AWS',
+      aws_access_key_id: ENV['S3_ACCESS_KEY_ID'],
+      aws_secret_access_key: ENV['S3_SECRET_ACCESS_KEY'],
+      region: ENV['S3_REGION'],
+      endpoint: 'https://s3.amazonaws.com'
+    }
+    config.fog_directory = ENV['S3_BUCKET']
+    config.fog_public = false
+    config.storage = :fog
   end
 end
