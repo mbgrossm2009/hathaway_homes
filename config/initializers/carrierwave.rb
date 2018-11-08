@@ -1,4 +1,3 @@
-require 'carrierwave/storage/fog'
 
 
 if Rails.env.production?
