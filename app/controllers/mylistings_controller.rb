@@ -8,6 +8,10 @@ class MylistingsController < ApplicationController
       end
     end
 
+def new
+@mylisting = Mylisting.new
+end
+
     def create
       @mylisting = Mylisting.new(mylisting_params)
        if @mylisting.save
@@ -25,9 +29,6 @@ class MylistingsController < ApplicationController
       redirect_to mylistings_path
     end
 
-    def new
-      @mylisting = Mylisting.new
-    end
 
     def show
       @mylisting = Mylisting.find(params[:id])

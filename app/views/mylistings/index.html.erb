@@ -3,14 +3,15 @@
     <% @mylistings.each do |mylisting| %>
       <div class="col-lg-3 col-sm-3 listing-info">
           <ul class="col-lg-12">
+
             <li>House Style: <%= mylisting.house_style %></li>
             <li>Street Address: <%= mylisting.street_address%></li>
             <li>Town: <%= mylisting.town%>  </li>
             <li>State:<%= mylisting.state%></li>
             <li>Zipcode:<%= mylisting.zipcode%></li>
-              <% mylisting.mylisting_photo.each_with_index do |photo, index| %>
+            <% mylisting.mylisting_photo.each_with_index do |photo, index| %>
                 <% if index == 0 %>
-                  <div><li><%= image_tag(photo.url, id: "all_photos") %><li></div>
+                  <div><li><%= image_tag(photo.url) %><li></div>
                 <% end %>
               <% end %>
                 <li><%= link_to 'More Information', mylisting %></li>
