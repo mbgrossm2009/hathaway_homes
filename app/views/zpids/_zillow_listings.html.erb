@@ -6,7 +6,7 @@
 
       <%property = Rubillow::HomeValuation.zestimate({ :zpid => zpid.zpid})%>
       <%if property.success?%>
-      <ul class="col-lg-3 zillow_listings">
+      <ul class="col-lg-3 zillow_listings listings">
         <li><%=image_tag("zillow/laurel_plan.jpg", class: "img_responsive", id: "zillow_image") %></li>
           <%property.address.each do |key, value|%>
         <li> <%="#{key}: #{value}"%></li>

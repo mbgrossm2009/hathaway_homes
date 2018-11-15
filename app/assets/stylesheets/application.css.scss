@@ -11,18 +11,17 @@
 //  * It is generally better to create a new file per style scope.
 //  *
 //
-//  */
-
 /*
  *= require rails_bootstrap_forms
  */
+
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 html, body {
     color: #efefef !important;
     background-color: #222222 !important;
     position:relative;
-    clear:both;
+
 }
 
 ul{
@@ -73,28 +72,29 @@ margin: 0px -572px 0px 0px;
 }
 
 
-
 .footer {
-  display:none;
-  position: absolute;
+  // position: absolute;
   bottom: 0;
   width: 100%;
-    height: 5rem;
+  height: 5rem;
   background-color: #efefef;
+  margin-top:10px;
+  clear:both;
 }
 .mylistingform li{
   color: white;
   list-style: none;
 }
-
-img #listing_photo {
-      width: 400px;
+.listings{
+  border-style: double;
+  border-width: 9px;
 }
 
 
 .zillow_listings {
   list-style: none;
-margin-top: 3rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
 
 }
 
@@ -152,14 +152,11 @@ border-style: double;
 border-width: 2rem;
 }
 
-#dave_info
+#dave_info {
   color:black;
 }
 
-.img-fluid{
- max-width: 100%;
- height:auto;
-}
+
 .control-label{
   color:white;
 

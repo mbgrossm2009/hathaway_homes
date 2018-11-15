@@ -1,0 +1,26 @@
+e153c1e0f78cd78b74869e36f98f654f81360fd9		branch 'TomK32-patch-1' of https://github.com/bootstrap-ruby/rails-bootstrap-forms
+de5c8795c0df17c1cee807096f2d2d0c141c5ae4		branch 'add-error-key-v3' of https://github.com/bootstrap-ruby/rails-bootstrap-forms
+a68a2425336851fe781549cb48957df4458fefe5		branch 'bootstrap-v4' of https://github.com/bootstrap-ruby/rails-bootstrap-forms
+77474554773d5babf64942e6b620208c82f165cb		branch 'fix-test-setup' of https://github.com/bootstrap-ruby/rails-bootstrap-forms
+8f46d28bcc18f078548a6ed1b0111b2921a3f9cf		branch 'legacy-2.7' of https://github.com/bootstrap-ruby/rails-bootstrap-forms
+ae6b872c24dc79e1eb4385c7bc03e5c6719eb0d1		branch 'master' of https://github.com/bootstrap-ruby/rails-bootstrap-forms
+3a5a5be167afe9199091cc1b8ae6ef47308747df		branch 'multiple-checked-values' of https://github.com/bootstrap-ruby/rails-bootstrap-forms
+0bc8444286fd94042980285deed4ee3782853256		branch 'remove-outdated-minitest-pins' of https://github.com/bootstrap-ruby/rails-bootstrap-forms
+271c20e28011d665856cad09e99036653cf8acb3	not-for-merge	tag '2.5.1' of https://github.com/bootstrap-ruby/rails-bootstrap-forms
+1f93ff54e0f09e9ebf7d78bb8673029f49b84482	not-for-merge	tag '2.5.2' of https://github.com/bootstrap-ruby/rails-bootstrap-forms
+116f9b5e30604ec3645c910440c9147e0ba86504	not-for-merge	tag 'v1.0.0' of https://github.com/bootstrap-ruby/rails-bootstrap-forms
+306550d30e7ca23c0af4a7a94f7006e1951623b4	not-for-merge	tag 'v2.0.0' of https://github.com/bootstrap-ruby/rails-bootstrap-forms
+fe1c763e46cc3a1ca1c3437c3f41f998b743a6e4	not-for-merge	tag 'v2.0.1' of https://github.com/bootstrap-ruby/rails-bootstrap-forms
+db8d477f89ff80a66631b4af9ec010e5d8582681	not-for-merge	tag 'v2.1.0' of https://github.com/bootstrap-ruby/rails-bootstrap-forms
+0520f6ce1dab72b3b82be202ba4c5c541f6af14e	not-for-merge	tag 'v2.1.1' of https://github.com/bootstrap-ruby/rails-bootstrap-forms
+f5ed46b119a7117eb4289aac67060f637eccbc44	not-for-merge	tag 'v2.2.0' of https://github.com/bootstrap-ruby/rails-bootstrap-forms
+f45d8e5fb422acd1eeb6371d615312d0cad0a938	not-for-merge	tag 'v2.3.0' of https://github.com/bootstrap-ruby/rails-bootstrap-forms
+a8cdbc4a7c07ac8f4656b363a5cebecff5234786	not-for-merge	tag 'v2.4.0' of https://github.com/bootstrap-ruby/rails-bootstrap-forms
+0bdc6c241e53f058d558651a086db7f80b160077	not-for-merge	tag 'v2.5.0' of https://github.com/bootstrap-ruby/rails-bootstrap-forms
+9c555b0ff147e5667e0b9504fea07da627b9abac	not-for-merge	tag 'v2.5.1' of https://github.com/bootstrap-ruby/rails-bootstrap-forms
+9d5a60869ff8f1257a52339b035f7f19db2a5232	not-for-merge	tag 'v2.5.2' of https://github.com/bootstrap-ruby/rails-bootstrap-forms
+7bae164ab2bd61179e9181f38d8d989480b54992	not-for-merge	tag 'v2.5.3' of https://github.com/bootstrap-ruby/rails-bootstrap-forms
+a0cdae80c081f69fd5e11ca4a4247b08747a3da9	not-for-merge	tag 'v2.6.0' of https://github.com/bootstrap-ruby/rails-bootstrap-forms
+1a2da3e770bc801c214990277b8f3ae7e79ede0a	not-for-merge	tag 'v2.7.0' of https://github.com/bootstrap-ruby/rails-bootstrap-forms
+ed7c351f2e68e38fee3cdb855d4448e4fffb68a2	not-for-merge	tag 'v4.0.0' of https://github.com/bootstrap-ruby/rails-bootstrap-forms
+dab9f4cbc0c8563e6a8010f51f1ad6f2b726090b	not-for-merge	tag 'v4.0.0.alpha1' of https://github.com/bootstrap-ruby/rails-bootstrap-forms

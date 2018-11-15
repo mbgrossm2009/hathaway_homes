@@ -1,22 +1,27 @@
-<div class="container">
-    <h1 class="my_listings">My Listings</h1>
+  <div class = "container">
+  <h1 class="my_listings">My Listings</h1>
     <div class = "row">
       <% @mylistings.each do |mylisting| %>
-        <ul>
+        <ul class = "listings col-lg-3">
           <% mylisting.mylisting_photo.each_with_index do |photo, index| %>
             <% if index == 0 %>
-              <li> <%= image_tag(photo.url, :id => "listing_photo", class: "img-fluid")%></li>
+
+               <li> <%= image_tag(photo.url, class: "listing_photo img-fluid")%></li>
             <% end %>
           <% end %>
-            <li>House Style: <%= mylisting.house_style %></li>
-            <li>Street Address: <%= mylisting.street_address%></li>
-            <li>Town: <%= mylisting.town%>  </li>
-            <li>State:<%= mylisting.state%></li>
-            <li>Zipcode:<%= mylisting.zipcode%></li>
-            <li><%= link_to 'More Information', mylisting %></li>
-          </ul>
+              <li>House Style: <%= mylisting.house_style %></li>
+              <li>Street Address: <%= mylisting.street_address%></li>
+              <li>Town: <%= mylisting.town%>  </li>
+              <li>State:<%= mylisting.state%></li>
+              <li>Zipcode:<%= mylisting.zipcode%></li>
+              <li><%= link_to 'More Information', mylisting %></li>
+
+        </ul>
       <% end %>
     </div>
+
+
+
   <% if @mylistings.blank? %>
       <h4 class="no_results">There are no listings</h4>
   <% end %>
