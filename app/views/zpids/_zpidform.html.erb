@@ -1,9 +1,17 @@
 
 <div class= "listing_info">
-  <%= form_for @zpid do |f| %>
-    <ul>
-      <li> <%= f.label :zpid,'Zpid: ' %>  <%= f.text_field :zpid %></li>
-      <li>   <%= f.submit "Create" %> </li>
+  <%= bootstrap_form_for @zpid do |f| %>
+  <div class = "container-fluid">
+    <div class = "row">
+
+    <ul class = col-lg-4>
+      <li> <%= f.text_field :zpid, label: "Enter Zpid"  %></li>
+      <li>   <%= f.submit "Create", id: "zpid_button" %> </li>
+
     </ul>
+    </div>
+    </div>
+
+
   <% end %>
 </div>

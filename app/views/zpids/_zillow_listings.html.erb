@@ -2,6 +2,8 @@
 
 <div class = "container">
   <div class = "row">
+
+      <h1 class = "text-center"> Featured Listings </h1>
     <%@zpids.each do |zpid|%>
 
       <%property = Rubillow::HomeValuation.zestimate({ :zpid => zpid.zpid})%>
