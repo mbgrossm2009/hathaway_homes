@@ -3,10 +3,12 @@
     <title>HathawayHomes</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
 
   </head>
   <body>
+
     <nav class="navbar navbar-inverse">
   <div class="container">
     <div class = "row">
@@ -55,12 +57,15 @@
         </div>
       </div>
   </nav>
-      <% if flash.any? %>
-        <div class="flash">
-          <div class="container-fluid">
-            <%= flash[:alert] %>
-      <% end %>
-      <%= yield %>
+
+
+
+  <% if flash.any? %>
+    <div class="flash">
+      <div class="container-fluid">
+        <%= flash[:alert] %>
+  <% end %>
+  <%= yield %>
     <footer class="footer font-small special-color-dark pt-4">
       <div class="container-fluid">
         <ul class="list-unstyled list-inline text-center">
@@ -80,5 +85,6 @@
           </li>
         </ul>
       </div>
+
     </body>
 </html>
