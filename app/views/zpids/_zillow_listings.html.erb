@@ -9,6 +9,7 @@
       <%property = Rubillow::HomeValuation.zestimate({ :zpid => zpid.zpid})%>
       <%if property.success?%>
       <ul class="col-lg-3 zillow_listings listings">
+
           <%property.address.each do |key, value|%>
         <li> <%="#{key.capitalize}: #{value}"%></li>
           <%end%>
