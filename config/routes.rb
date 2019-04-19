@@ -14,6 +14,7 @@ resources :mylistings
     post 'downvote'
   end
 end
+
 resources :searches
 
 resources :users, only: [:index]
