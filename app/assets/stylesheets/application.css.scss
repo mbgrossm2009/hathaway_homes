@@ -99,8 +99,13 @@ margin: 0px -572px 0px 0px;
   border-style: double;
   border-width: 9px;
 }
+.listings_show{
+  list-style-type: none;
+}
 
-
+.my_listing_info{
+  line-height: 2em;
+}
 .zillow_listings {
   list-style: none;
   margin-top: 10px;

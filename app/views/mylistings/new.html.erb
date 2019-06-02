@@ -10,11 +10,11 @@
           <li><%= f.text_field :town, label: "Town" %></li>
           <li><%= f.text_field :zipcode, label: "Zipcode" %></li>
           <li><%= f.select :number_of_bathrooms,(1..10).inject([0]) { |arr, val| arr << [val,val + 0.5] }.flatten, label: "Number of Bathrooms"  %></li>
-          <li><%= f.select :number_of_bedrooms,[0,1,2,3,4,5,6,7,8,9,10]  %></li>
+          <li><%= f.select :number_of_bedrooms,[0,1,2,3,4,5,6,7,8,9,10], label: "Number of Bedrooms"  %></li>
           <li><%= f.text_field :square_footage, label: "Square Footage" %></li>
           <li> <%= f.text_field :asking_price , label: "Asking Price"%></li>
           <li><%= f.text_area :description, cols: 40, rows: 15, class: 'myclass', label: "Description"%></li>
-          <li><%= f.file_field :mylisting_photo, multiple: true %></li>
+          <li><%= f.file_field :mylisting_photo, multiple: true, label: "Images" %></li>
           <li><%= f.hidden_field :user_id, value: current_user.id %></li>
           <li id= "submit_button"> <%= f.submit "Create" %></li>
         </ul>

@@ -59,6 +59,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'rspec-rails'
   gem 'pry-rails'
+   gem 'rb-readline'
   gem 'railties', '~> 5.0', '>= 5.0.0.1'
   gem 'dotenv-rails'
 

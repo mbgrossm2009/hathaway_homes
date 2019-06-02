@@ -8,7 +8,7 @@ feature "An authorized user can add his or her own listing" do
   scenario "Can add own listing" do
 
     sign_in user
-    visit new_listing_path
+    visit new_mylisting_path
     select("Ranch", from: "House Style").select_option
     fill_in "Street Address", with: "8 Valley Brook Rd"
     fill_in "State", with: "MA"
@@ -18,7 +18,7 @@ feature "An authorized user can add his or her own listing" do
     select("5", from: "Number of Bathrooms").select_option
     select("4", from: "Number of Bedrooms").select_option
     fill_in 'Asking Price', with: 120000
-    attach_file "Listing Photo", "#{Rails.root}/spec/support/images/photo.png"
+    attach_file "Images", "#{Rails.root}/spec/support/images/photo.png"
     click_button "Create"
 
       expect(page).to have_content("Ranch")
@@ -30,7 +30,7 @@ feature "An authorized user can add his or her own listing" do
 
   scenario "view items in show page" do
     sign_in user
-    visit new_listing_path
+    visit new_mylisting_path
     select("Ranch", from: "House Style").select_option
     fill_in "Street Address", with: "8 Valley Brook Rd"
     fill_in "State", with: "MA"
@@ -40,7 +40,7 @@ feature "An authorized user can add his or her own listing" do
     select("5", from: "Number of Bathrooms").select_option
     select("4", from: "Number of Bedrooms").select_option
     fill_in 'Asking Price', with: 120000
-    attach_file "Listing Photo", "#{Rails.root}/spec/support/images/photo.png"
+    attach_file "Images", "#{Rails.root}/spec/support/images/photo.png"
     click_button "Create"
     click_link "More Information"
 

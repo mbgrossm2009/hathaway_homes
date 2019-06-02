@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
 <div class = "container">
   <div class = "row">
-    <ul class = "col-lg-6">
+    <ul class = "my_listing_info col-lg-6">
       <li>House Style: <%= @mylisting.house_style  %></li>
       <li>Street Address: <%= @mylisting.street_address%></li>
       <li>Town: <%= @mylisting.town%> </li>
@@ -27,7 +27,7 @@
   <div class = "row">
     <div class = "col-lg-4">
       <% @mylisting.mylisting_photo.each do |photo| %>
-        <li class = 'col-lg-5'><%= image_tag(photo.url, class: "listing_photos")%></li>
+        <li class = ' listings_show col-lg-5'><%= image_tag(photo.url, class: "listing_photos")%></li>
       <% end %>
     </div>
   </div>

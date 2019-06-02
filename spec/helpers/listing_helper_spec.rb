@@ -1,4 +1,4 @@
-require 'rails_helper'
+# require 'rails_heslper'
 
 # Specs in this file have access to a helper object that includes
 # the ListingHelper. For example:

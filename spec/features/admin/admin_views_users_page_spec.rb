@@ -6,7 +6,7 @@ feature 'admin can view the users page' do
   scenario ' admin views users page' do
     sign_in user
     user.update_attributes(admin: true)
-    visit users_path
+    visit mylistings_path
     click_link "Admin Page"
 
     expect(page).to have_content("Admin Page")
