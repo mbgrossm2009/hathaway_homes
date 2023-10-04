@@ -48,5 +48,9 @@ feature "An authorized user can add his or her own listing" do
       expect(page).to have_content("2")
       expect(page).to have_content("5")
       expect(page).to have_content("120000")
-    end
+      expect(page).to_not have_content("120000.00")
+
+
+
+      end
 end
