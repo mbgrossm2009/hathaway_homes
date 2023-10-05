@@ -7,7 +7,8 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.4'
+gem 'rails', '~> 7.0.8'
+
 gem 'fog-aws'
 gem 'rake'
 # Use sqlite3 as the database for Active Record
@@ -36,13 +37,11 @@ gem "launchy"
 gem 'sendgrid-ruby'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
-gem 'pg', '~> 0.18.4'
+gem 'pg', '~> 1.5', '>= 1.5.4'
 gem "carrierwave", :github => "carrierwaveuploader/carrierwave"
 gem "mini_magick"
 gem 'rails_12factor', group: :production
-gem "bootstrap_form",
-    git: "https://github.com/bootstrap-ruby/rails-bootstrap-forms.git",
-    branch: "master"
+gem "bootstrap_form"
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
@@ -60,7 +59,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'pry-rails'
    gem 'rb-readline'
-  gem 'railties', '~> 5.0', '>= 5.0.0.1'
+  gem 'railties', '~> 7.0.8'
   gem 'dotenv-rails'
 
 end
